@@ -1,0 +1,15 @@
+Source: arco-emacs
+Section: shells
+Priority: extra
+Maintainer: ARCO Research Group <sysadm@arco.esi.uclm.es>
+Uploaders: David Villa Alises <David.Villa@uclm.es>
+Build-Depends: debhelper (>= 7.0.50~), yasnippet, emacs-goodies-el
+Standards-Version: 3.9.2
+Homepage: https://bitbucket.org/arco_group/arco-emacs
+
+Package: arco-emacs
+Architecture: all
+Depends: ${misc:Depends}, yasnippet, emacs-goodies-el, auto-complete-el
+Suggests: libnotify-bin
+Description: Modular emacs configuration
+ Development tools for ARCO staff.
