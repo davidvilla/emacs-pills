@@ -4,8 +4,9 @@
 DESTDIR?=~
 
 BASE=$(DESTDIR)/usr/share/arco-tools
-YASNIPPET=$(DESTDIR)/usr/share/emacs/site-lisp/yasnippet/snippets/text-mode
 EMACS=$(DESTDIR)/usr/share/arco-tools/emacs
+YASNIPPET=$(DESTDIR)/usr/share/emacs/site-lisp/yasnippet/snippets/text-mode
+DOCBOOK=http://www.oasis-open.org/docbook/rng/4.5
 
 WGET=wget --no-check-certificate -nv
 
@@ -21,6 +22,8 @@ clean:
 install:
 	install -vd $(BASE)
 
+	install -v -m 755 bin/* $(BASE)/
+
 	install -vd $(YASNIPPET)
 	install -v -m 444 yasnippet/text-mode/*.yasnippet $(YASNIPPET)/
 	install -vd $(YASNIPPET)/python-mode
@@ -34,6 +37,12 @@ install:
 	install -vm 444 config/*.cfg.elc $(EMACS)/
 
 	install -vm 444 config/schemas.xml $(EMACS)/
+	@$(WGET) $(DOCBOOK)/docbook.rnc  -O $(EMACS)/docbook.rnc
+	@$(WGET) $(DOCBOOK)/dbnotnx.rnc  -O $(EMACS)/dbnotnx.rnc
+	@$(WGET) $(DOCBOOK)/dbpoolx.rnc  -O $(EMACS)/dbpoolx.rnc
+	@$(WGET) $(DOCBOOK)/htmltblx.rnc -O $(EMACS)/htmltblx.rnc
+	@$(WGET) $(DOCBOOK)/calstblx.rnc -O $(EMACS)/calstblx.rnc
+	@$(WGET) $(DOCBOOK)/dbhierx.rnc  -O $(EMACS)/dbhierx.rnc
 
 	install -vd $(EMACS)/template
 	install -vm 444 template/* $(EMACS)/template/

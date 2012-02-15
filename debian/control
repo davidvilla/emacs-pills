@@ -13,3 +13,9 @@ Depends: ${misc:Depends}, yasnippet, emacs-goodies-el, auto-complete-el
 Suggests: libnotify-bin
 Description: Modular emacs configuration
  Development tools for ARCO staff.
+
+Package: arco-emacs-python
+Architecture: all
+Depends: ${misc:Depends}, arco-emacs, pylint, pep8, pyflakes
+Description: Python emacs support
+ Emacs packages and utilities for Python programming
