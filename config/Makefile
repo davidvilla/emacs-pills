@@ -1,6 +1,6 @@
 SOURCES=$(wildcard *.cfg.el)
 
-all: modular-emacs-conf.rst
+all: ../README.rst
 
 %.html: %.rst $(SOURCES) gen-doc.py
 	rst2html --generator --date --stylesheet ./style.css $< $@
@@ -8,7 +8,7 @@ all: modular-emacs-conf.rst
 %.1: $.rst $(SOURCES) gen-doc.py
 	rst2man $< $@
 
-modular-emacs-conf.rst: $(SOURCES) Makefile header.rst gen-doc.py
+../README.rst: $(SOURCES) Makefile header.rst gen-doc.py
 	./gen-doc.py $@
 
 clean:
