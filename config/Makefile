@@ -8,7 +8,7 @@ all: modular-emacs-conf.rst
 %.1: $.rst $(SOURCES) gen-doc.py
 	rst2man $< $@
 
-modular-emacs-conf.rst: $(SOURCES) Makefile
+modular-emacs-conf.rst: $(SOURCES) Makefile header.rst gen-doc.py
 	./gen-doc.py $@
 
 clean:

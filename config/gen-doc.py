@@ -4,7 +4,7 @@
 import sys
 import glob
 
-REPO = 'http://arco.esi.uclm.es/svn/public/prj/arco-tools/emacs/config'
+REPO = 'https://bitbucket.org/arco_group/arco-emacs/src/tip/config'
 
 
 def gen_title(text, level='='):
