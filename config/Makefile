@@ -1,10 +1,6 @@
-
-all: modular-emacs-conf.html
-
 SOURCES=$(wildcard *.cfg.el)
 
-install: all
-	scp modular-emacs-conf.html develsite:web/static
+all: modular-emacs-conf.rst
 
 %.html: %.rst $(SOURCES) gen-doc.py
 	rst2html --generator --date --stylesheet ./style.css $< $@

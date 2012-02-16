@@ -46,3 +46,7 @@ install:
 
 	install -vd $(EMACS)/template
 	install -vm 444 template/* $(EMACS)/template/
+
+
+gen-doc:
+	$(MAKE) -C config
