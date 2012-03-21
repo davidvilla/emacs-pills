@@ -10,6 +10,7 @@ Homepage: https://bitbucket.org/arco_group/arco-emacs
 Package: arco-emacs
 Architecture: all
 Depends: ${misc:Depends}, yasnippet, emacs-goodies-el, auto-complete-el
+Conflicts: arco-devel (<< 0.20120213)
 Suggests: libnotify-bin
 Description: Modular emacs configuration
  Development tools for ARCO staff.
