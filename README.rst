@@ -9,14 +9,15 @@ package adding next line to your ``/etc/apt/sources.list``::
 
   deb http://babel.esi.uclm.es/arco sid main
 
-And running::
+And run::
 
   $ sudo apt-get install arco-emacs
   $ sudo apt-get install arco-emacs-python
 
-Them, write down something like that in your ``~/.emacs``::
+Then, write down something like that in your ``~/.emacs``::
 
   (add-to-list 'load-path "/usr/share/arco-tools/emacs")
+  (load "minimal.cfg")
   (load "tabbar.cfg")
   (load "maximize.cfg")
 
