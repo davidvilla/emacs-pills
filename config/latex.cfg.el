@@ -10,4 +10,4 @@
 (setq reftex-plug-into-AUCTeX t)
 
 (defun flymake-get-tex-args (file-name)
-  (list "/usr/share/arco-tools/flymake-latex-checker" (list file-name)))
+  (list "/usr/share/arco/flymake-latex-checker" (list file-name)))

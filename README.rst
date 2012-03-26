@@ -16,7 +16,7 @@ And run::
 
 Then, write down something like that in your ``~/.emacs``::
 
-  (add-to-list 'load-path "/usr/share/arco-tools/emacs")
+  (add-to-list 'load-path "/usr/share/arco/emacs")
   (load "minimal.cfg")
   (load "tabbar.cfg")
   (load "maximize.cfg")
@@ -195,4 +195,3 @@ Keystrokes:
 - C-<plus> or C-mousewheel-up: increases font size.
 - C-<minus> or C-mousewheel-down: decreases font size.
 - C-0 reverts font size to default.
-

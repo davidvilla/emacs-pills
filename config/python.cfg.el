@@ -15,7 +15,7 @@
 		   (local-file (file-relative-name temp-file
 						(file-name-directory buffer-file-name))))
 
-      (list "/usr/share/arco-tools/flymake-python-checker" (list local-file))))
+      (list "/usr/share/arco/flymake-python-checker" (list local-file))))
 
   (add-to-list 'flymake-allowed-file-name-masks
 			   '("\\.py\\'" flymake-python-checker-init)))

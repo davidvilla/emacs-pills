@@ -4,5 +4,5 @@
   <documentElement localName="chapter" typeId="DocBook"/>
   <documentElement localName="article" typeId="DocBook"/>
   <documentElement localName="book" typeId="DocBook"/>
-  <typeId id="DocBook" uri="/usr/share/arco-tools/emacs/docbook.rnc"/>
+  <typeId id="DocBook" uri="/usr/share/arco/emacs/docbook.rnc"/>
 </locatingRules>

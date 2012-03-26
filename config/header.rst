@@ -16,7 +16,7 @@ And run::
 
 Then, write down something like that in your ``~/.emacs``::
 
-  (add-to-list 'load-path "/usr/share/arco-tools/emacs")
+  (add-to-list 'load-path "/usr/share/arco/emacs")
   (load "minimal.cfg")
   (load "tabbar.cfg")
   (load "maximize.cfg")

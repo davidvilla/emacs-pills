@@ -3,8 +3,8 @@
 
 DESTDIR?=~
 
-BASE=$(DESTDIR)/usr/share/arco-tools
-EMACS=$(DESTDIR)/usr/share/arco-tools/emacs
+BASE=$(DESTDIR)/usr/share/arco
+EMACS=$(DESTDIR)/usr/share/arco/emacs
 YASNIPPET=$(DESTDIR)/usr/share/emacs/site-lisp/yasnippet/snippets/text-mode
 DOCBOOK=http://www.oasis-open.org/docbook/rng/4.5
 

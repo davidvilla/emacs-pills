@@ -1,3 +1,15 @@
+arco-emacs (0.20120326-1) unstable; urgency=low
+
+  * New release
+
+ -- David Villa Alises <David.Villa@uclm.es>  Mon, 26 Mar 2012 19:49:00 +0200
+
+arco-emacs (0.20120214-2) unstable; urgency=low
+
+  * New release
+
+ -- David Villa Alises <David.Villa@uclm.es>  Mon, 26 Mar 2012 19:20:29 +0200
+
 arco-emacs (0.20120214-1) unstable; urgency=low
 
   * Initial release
