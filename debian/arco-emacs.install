@@ -12,6 +12,7 @@ usr/share/arco/emacs/minimal.cfg.elc
 usr/share/arco/emacs/paren-autoclose.cfg.elc
 usr/share/arco/emacs/psgml.cfg.elc
 usr/share/arco/emacs/schemas.xml
+usr/share/arco/emacs/slice.cfg.elc
 usr/share/arco/emacs/speedbar.cfg.elc
 usr/share/arco/emacs/strip.cfg.elc
 usr/share/arco/emacs/tabbar.cfg.elc
