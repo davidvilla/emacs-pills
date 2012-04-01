@@ -36,5 +36,6 @@
 	(list (cond
 	       ((string-equal "*" (substring (buffer-name) 0 1)) "Emacs Buffer")
 	       ((eq major-mode 'dired-mode) "Dired")
+	       ((eq major-mode 'compilation-mode) "Compilation")
 	       (t "User Buffer")
 	       ))))

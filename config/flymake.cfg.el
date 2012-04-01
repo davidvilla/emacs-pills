@@ -1,6 +1,6 @@
 ;;; flymake.cfg.el ---
 
-;| custom faces for flymake error highlight.
+;| custom config and faces for flymake error highlight.
 
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
@@ -12,3 +12,5 @@
  '(flymake-warnline ((((class color) (background light))
      (:background "#ffeecc" :foreground "gray10"))))
 )
+
+(setq flymake-no-changes-timeout 2)

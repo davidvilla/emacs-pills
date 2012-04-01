@@ -12,4 +12,4 @@ all: ../README.rst
 	./gen-doc.py $@
 
 clean:
-	$(RM) *.html *.1 modular-emacs-conf.rst
+	$(RM) *.html *.elc *.1 modular-emacs-conf.rst
