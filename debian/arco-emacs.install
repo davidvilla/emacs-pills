@@ -18,6 +18,7 @@ usr/share/arco/emacs/strip.cfg.elc
 usr/share/arco/emacs/tabbar.cfg.elc
 usr/share/arco/emacs/toggle-split.cfg.elc
 usr/share/arco/emacs/uniquify.cfg.elc
+usr/share/arco/emacs/window-move.cfg.elc
 usr/share/arco/emacs/zoom.cfg.elc
 usr/share/arco/emacs/template/
 usr/share/emacs/site-lisp/yasnippet/snippets/text-mode/

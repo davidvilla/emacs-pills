@@ -43,6 +43,12 @@ It contains a set of templates that are automatically inserted when you
 create empty files. It includes default headers for Python, bash, LaTeX and
 others.
 
+`compile.cfg <https://bitbucket.org/arco_group/arco-emacs/src/tip/config/compile.cfg.el>`_
+==========================================================================================
+
+Convenience configuration for ``compile`` command.
+- auto-save file instead of asking
+
 `docbook.cfg <https://bitbucket.org/arco_group/arco-emacs/src/tip/config/docbook.cfg.el>`_
 ==========================================================================================
 
@@ -51,7 +57,7 @@ nxml-mode configuration for DocBook 4.5.
 `flymake.cfg <https://bitbucket.org/arco_group/arco-emacs/src/tip/config/flymake.cfg.el>`_
 ==========================================================================================
 
-custom faces for flymake error highlight.
+custom config and faces for flymake error highlight.
 
 `flyspell.cfg <https://bitbucket.org/arco_group/arco-emacs/src/tip/config/flyspell.cfg.el>`_
 ============================================================================================
@@ -104,7 +110,7 @@ Highlight the current line.
 ======================================================================================
 
 Activates and binds RefTeX minor mode.
-It provides a live checker for flymake (disabled by default). To enable it::
+Provides a live checker for flymake (disabled by default). To enable it::
 
   M-x flymake-mode
 
@@ -142,6 +148,11 @@ opening one.
 flymake configuration for python-mode (enabled by default).
 Set pyflakes as Python syntax checker. Run with C-c C-v
 
+`slice.cfg <https://bitbucket.org/arco_group/arco-emacs/src/tip/config/slice.cfg.el>`_
+======================================================================================
+
+Syntax highlight (with c++-mode) for .ice files
+
 `speedbar.cfg <https://bitbucket.org/arco_group/arco-emacs/src/tip/config/speedbar.cfg.el>`_
 ============================================================================================
 
@@ -167,6 +178,7 @@ A very good customization for tabbar-mode.
 
 Keystrokes:
 
+- M-<n> for the first 10 tabs
 - C-S-left and C-S-right to change among buffers in the same group.
 - C-S-up and C-S-down to change among groups.
 
@@ -185,6 +197,18 @@ buffers with the same filename.
 
 Keystrokes: None
 
+`window-move.cfg <https://bitbucket.org/arco_group/arco-emacs/src/tip/config/window-move.cfg.el>`_
+==================================================================================================
+
+Move among windows with keyboard
+
+Keystrokes:
+
+- Meta-left:  Move to left window
+- Meta-right: Move to right window
+- Meta-up:    Move to upper window
+- Meta-down:  Move to downer window
+
 `zoom.cfg <https://bitbucket.org/arco_group/arco-emacs/src/tip/config/zoom.cfg.el>`_
 ====================================================================================
 
@@ -195,3 +219,4 @@ Keystrokes:
 - C-<plus> or C-mousewheel-up: increases font size.
 - C-<minus> or C-mousewheel-down: decreases font size.
 - C-0 reverts font size to default.
+
