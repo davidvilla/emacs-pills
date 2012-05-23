@@ -5,11 +5,15 @@
 ;|
 ;|   M-x flymake-mode
 
+(setq TeX-auto-save t)
+(setq TeX-auto-local nil)
+(setq TeX-parse-self t)
+(setq-default TeX-master "main")
+
 ; Activate and connect RefTeX
 (add-hook 'LaTeX-mode-hook 'turn-on-reftex)
 (setq reftex-plug-into-AUCTeX t)
 
-;(setq-default TeX-master nil)  ; Query for master file.
 ;(add-hook 'LaTeX-mode-hook 'LaTeX-math-mode)
 
 (defun flymake-get-tex-args (file-name)
