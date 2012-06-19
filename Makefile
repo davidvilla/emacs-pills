@@ -21,7 +21,6 @@ clean:
 
 install:
 	install -vd $(BASE)
-
 	install -v -m 755 bin/* $(BASE)/
 
 	install -vd $(YASNIPPET)
@@ -35,6 +34,7 @@ install:
 
 	install -vd $(EMACS)
 	install -vm 444 config/*.cfg.elc $(EMACS)/
+	install -vm 444 template.el $(EMACS)/
 
 	install -vm 444 config/schemas.xml $(EMACS)/
 	@$(WGET) $(DOCBOOK)/docbook.rnc  -O $(EMACS)/docbook.rnc

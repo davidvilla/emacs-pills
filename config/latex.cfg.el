@@ -6,8 +6,11 @@
 ;|   M-x flymake-mode
 
 (setq TeX-auto-save t)
-(setq TeX-auto-local nil)
-(setq TeX-parse-self t)
+
+(setq TeX-parse-self t) ; Enable parse on load.
+(setq TeX-auto-save t) ; Enable parse on save.
+(setq TeX-auto-local "")
+
 (setq-default TeX-master "main")
 
 ; Activate and connect RefTeX
