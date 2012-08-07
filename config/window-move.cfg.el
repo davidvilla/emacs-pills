@@ -4,14 +4,14 @@
 ;|
 ;| Keystrokes:
 ;|
-;| - Super-left:  Move to left window
-;| - Super-right: Move to right window
-;| - Super-up:    Move to upper window
-;| - Super-down:  Move to downer window
+;| - Control-Super-left:  Move to left window
+;| - Control-Super-right: Move to right window
+;| - Control-Super-up:    Move to upper window
+;| - Control-Super-down:  Move to downer window
 
 ;(windmove-default-keybindings 'meta)
 
-(global-set-key [s-left] 'windmove-left)
-(global-set-key [s-right] 'windmove-right)
-(global-set-key [s-up] 'windmove-up)
-(global-set-key [s-down] 'windmove-down)
+(global-set-key [C-s-left] 'windmove-left)
+(global-set-key [C-s-right] 'windmove-right)
+(global-set-key [C-s-up] 'windmove-up)
+(global-set-key [C-s-down] 'windmove-down)
