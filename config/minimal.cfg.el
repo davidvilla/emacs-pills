@@ -65,3 +65,6 @@
   '(lambda ()
   	 (or (file-exists-p (file-name-directory buffer-file-name))
   		 (make-directory (file-name-directory buffer-file-name) t))))
+
+; Icons-only for the toolbar
+(setq tool-bar-style (quote image))

@@ -22,3 +22,10 @@
 
 (defun flymake-get-tex-args (file-name)
   (list "/usr/share/arco/flymake-latex-checker" (list file-name)))
+
+
+; http://wikemacs.org/wiki/AUCTeX
+;; (setq TeX-view-program-selection
+;;       '((output-dvi "DVI Viewer")
+;;         (output-pdf "PDF Viewer")
+;;         (output-html "HTML Viewer")))
