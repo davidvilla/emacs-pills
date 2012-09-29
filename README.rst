@@ -130,6 +130,16 @@ Keystrokes:
 Basic customization useful for most of users. It does not provide new keystrokes or
 commands.
 
+`move-line-or-region.cfg <https://bitbucket.org/arco_group/arco-emacs/src/tip/config/move-line-or-region.cfg.el>`_
+==================================================================================================================
+
+Move line (or current selected area) up and down.
+
+Keystrokes:
+
+- M-up:   move text up
+- M-down: move text down
+
 `paren-autoclose.cfg <https://bitbucket.org/arco_group/arco-emacs/src/tip/config/paren-autoclose.cfg.el>`_
 ==========================================================================================================
 
@@ -204,10 +214,10 @@ Move among windows with keyboard
 
 Keystrokes:
 
-- Meta-left:  Move to left window
-- Meta-right: Move to right window
-- Meta-up:    Move to upper window
-- Meta-down:  Move to downer window
+- Shift-Meta-left:  Move to left window
+- Shift-Meta-right: Move to right window
+- Shift-Meta-up:    Move to upper window
+- Shift-Meta-down:  Move to downer window
 
 `zoom.cfg <https://bitbucket.org/arco_group/arco-emacs/src/tip/config/zoom.cfg.el>`_
 ====================================================================================

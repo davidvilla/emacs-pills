@@ -1,23 +1,47 @@
+arco-emacs (0.20120904-1) unstable; urgency=low
+
+  * New release
+
+ -- David Villa Alises <David.Villa@gmail.com>  Tue, 04 Sep 2012 18:03:25 +0200
+
+arco-emacs (0.20120620-1) unstable; urgency=low
+
+  * New release
+
+ -- David Villa Alises <David.Villa@gmail.com>  Wed, 20 Jun 2012 17:58:47 +0200
+
+arco-emacs (0.20120619-1) unstable; urgency=low
+
+  * New release
+
+ -- David Villa Alises <David.Villa@gmail.com>  Tue, 19 Jun 2012 18:53:48 +0200
+
+arco-emacs (0.20120523-1) unstable; urgency=low
+
+  * New release
+
+ -- David Villa Alises <David.Villa@gmail.com>  Wed, 23 May 2012 19:38:34 +0200
+
 arco-emacs (0.20120403-1) unstable; urgency=low
 
   * New release
 
- -- David Villa Alises <David.Villa@uclm.es>  Tue, 03 Apr 2012 18:03:48 +0200
+ -- David Villa Alises <David.Villa@gmail.com>  Tue, 03 Apr 2012 18:03:48 +0200
 
 arco-emacs (0.20120326-1) unstable; urgency=low
 
   * New release
 
- -- David Villa Alises <David.Villa@uclm.es>  Mon, 26 Mar 2012 19:49:00 +0200
+ -- David Villa Alises <David.Villa@gmail.com>  Mon, 26 Mar 2012 19:49:00 +0200
 
 arco-emacs (0.20120214-2) unstable; urgency=low
 
   * New release
 
- -- David Villa Alises <David.Villa@uclm.es>  Mon, 26 Mar 2012 19:20:29 +0200
+ -- David Villa Alises <David.Villa@gmail.com>  Mon, 26 Mar 2012 19:20:29 +0200
 
 arco-emacs (0.20120214-1) unstable; urgency=low
 
   * Initial release
 
- -- David Villa Alises <David.Villa@uclm.es>  Tue, 14 Feb 2012 22:04:23 +0100
+ -- David Villa Alises <David.Villa@gmail.com>  Tue, 14 Feb 2012 22:04:23 +0100
