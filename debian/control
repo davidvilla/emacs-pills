@@ -1,22 +1,24 @@
-Source: arco-emacs
+Source: emacs-pills
 Section: shells
 Priority: extra
 Maintainer: ARCO Research Group <sysadm@arco.esi.uclm.es>
 Uploaders: David Villa Alises <David.Villa@gmail.com>
 Build-Depends: debhelper (>= 7.0.50~), yasnippet, emacs-goodies-el
 Standards-Version: 3.9.3
-Homepage: https://bitbucket.org/arco_group/arco-emacs
+Homepage: https://bitbucket.org/arco_group/emacs-pills
 
-Package: arco-emacs
+Package: emacs-pills
 Architecture: all
 Depends: ${misc:Depends}, yasnippet, emacs-goodies-el, auto-complete-el
 Conflicts: arco-devel (<< 0.20120213)
+Replaces: arco-emacs
 Suggests: libnotify-bin
 Description: Modular emacs configuration
- Development tools for ARCO staff.
+ Emacs configuration and utilities for everybody
 
-Package: arco-emacs-python
+Package: emacs-pills-python
 Architecture: all
-Depends: ${misc:Depends}, arco-emacs, pylint, pep8, pyflakes
+Depends: ${misc:Depends}, emacs-pills, pylint, pep8, pyflakes
+Replaces: arco-emacs-python
 Description: Python emacs support
- Emacs packages and utilities for Python programming
+ Emacs configuration and utilities for Python programmers
