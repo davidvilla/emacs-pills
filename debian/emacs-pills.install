@@ -1,6 +1,7 @@
 usr/share/arco/emacs/template.el
 usr/share/arco/emacs/auto-complete.cfg.elc
 usr/share/arco/emacs/auto-insert.cfg.elc
+usr/share/arco/emacs/auto-create-dirs.cfg.elc
 usr/share/arco/emacs/docbook.cfg.elc
 usr/share/arco/emacs/flymake.cfg.elc
 usr/share/arco/emacs/flyspell.cfg.elc
