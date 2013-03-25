@@ -2,7 +2,8 @@
 Modular Emacs Configuration
 ===========================
 
-It is a set of configuration "fragments" that you may use independently.
+It is a set of configuration config "fragments" (pills) that you may use independently,
+but it is warrantied that all of them work well together.
 
 To use one of these in your Emacs you must install the ``emacs-pills`` debian
 package adding next line to your ``/etc/apt/sources.list``::
@@ -20,6 +21,8 @@ Then, write down something like that in your ``~/.emacs``::
   (load "minimal.cfg")
   (load "tabbar.cfg")
   (load "maximize.cfg")
+
+adding what you want...
 
 
 .. Local Variables:

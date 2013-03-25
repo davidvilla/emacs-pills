@@ -12,7 +12,7 @@ WGET=wget --no-check-certificate -nv
 
 all:
 	find config -name "*.cfg.el" | awk '{print "(byte-compile-file \"" $$1 "\")";}' > compile.el
-	/usr/bin/emacs -batch -l compile.el -kill
+	/usr/bin/emacs -L modules -batch -l compile.el -kill
 
 clean:
 	$(RM) $(shell find -name *~)
@@ -35,6 +35,7 @@ install:
 	install -vd $(EMACS)
 	install -vm 444 config/*.cfg.elc $(EMACS)/
 	install -vm 444 template.el $(EMACS)/
+	install -vm 444 modules/*.el $(EMACS)/
 
 	install -vm 444 config/schemas.xml $(EMACS)/
 	@$(WGET) $(DOCBOOK)/docbook.rnc  -O $(EMACS)/docbook.rnc
