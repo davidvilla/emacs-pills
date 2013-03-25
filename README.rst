@@ -51,6 +51,13 @@ It contains a set of templates that are automatically inserted when you
 create empty files. It includes default headers for Python, bash, LaTeX and
 others.
 
+`compile-bookmarks.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/compile-bookmarks.cfg.el>`_
+===============================================================================================================
+
+store and reuse compile commands
+
+C-c F8   Run all tests
+
 `compile.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/compile.cfg.el>`_
 ===========================================================================================
 

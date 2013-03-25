@@ -2,6 +2,7 @@
 (load "auto-complete.cfg")
 (load "auto-create-dirs.cfg")
 (load "auto-insert.cfg")
+(load "compile-bookmarks.cfg")
 (load "compile.cfg")
 (load "develock-py.cfg")
 (load "develock.cfg")
