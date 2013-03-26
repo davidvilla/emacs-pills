@@ -1,7 +1,9 @@
-usr/share/arco/emacs/template.el
 usr/share/arco/emacs/auto-complete.cfg.elc
-usr/share/arco/emacs/auto-insert.cfg.elc
 usr/share/arco/emacs/auto-create-dirs.cfg.elc
+usr/share/arco/emacs/auto-insert.cfg.elc
+usr/share/arco/emacs/compile-bookmarks.cfg.elc
+usr/share/arco/emacs/compile-bookmarks.el
+usr/share/arco/emacs/compile.cfg.elc
 usr/share/arco/emacs/docbook.cfg.elc
 usr/share/arco/emacs/flymake.cfg.elc
 usr/share/arco/emacs/flyspell.cfg.elc
@@ -20,12 +22,11 @@ usr/share/arco/emacs/slice.cfg.elc
 usr/share/arco/emacs/speedbar.cfg.elc
 usr/share/arco/emacs/strip.cfg.elc
 usr/share/arco/emacs/tabbar.cfg.elc
+usr/share/arco/emacs/template.el
+usr/share/arco/emacs/template/
 usr/share/arco/emacs/toggle-split.cfg.elc
 usr/share/arco/emacs/uniquify.cfg.elc
 usr/share/arco/emacs/window-move.cfg.elc
 usr/share/arco/emacs/zoom.cfg.elc
-usr/share/arco/emacs/template/
-usr/share/arco/emacs/compile-bookmarks.el
-usr/share/arco/emacs/compile-bookmarks.cfg.elc
 usr/share/emacs/site-lisp/yasnippet/snippets/text-mode/
 usr/share/emacs/site-lisp/yasnippet/snippets/text-mode/python-mode/

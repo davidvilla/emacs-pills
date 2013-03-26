@@ -2,13 +2,13 @@
 
 ;| nose python test runner bindings:
 ;|
-;| C-ca   Run all tests
-;| C-cM   Run module tests
-;| C-c.   Run current test
-;| C-cx   Stop nose
-;| C-cpa  Run all tests (run pdb on fail)
-;| C-cpm  Run module tests (run pdb on fail)
-;| C-cp.  Run current test (run pdb on fail)
+;| - C-ca   Run all tests
+;| - C-cM   Run module tests
+;| - C-c.   Run current test
+;| - C-cx   Stop nose
+;| - C-cpa  Run all tests (run pdb on fail)
+;| - C-cpm  Run module tests (run pdb on fail)
+;| - C-cp.  Run current test (run pdb on fail)
 
 (require 'nose)
 
