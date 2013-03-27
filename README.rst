@@ -247,7 +247,7 @@ A very good customization for tabbar-mode.
 - Better faces for tabs.
 - Separate buffers in three independent groups: user files, dired and messages.
 
-.. image:: http://crysol.org/files/emacs.png
+.. image:: http://crysol.org/files/emacs-tabbar.png
 
 Keystrokes:
 
