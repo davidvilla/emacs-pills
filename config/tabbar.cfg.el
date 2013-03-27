@@ -6,6 +6,8 @@
 ;| - Better faces for tabs.
 ;| - Separate buffers in three independent groups: user files, dired and messages.
 ;|
+;| .. image:: http://crysol.org/files/emacs.png
+;|
 ;| Keystrokes:
 ;|
 ;| - M-<n> for the first 10 tabs

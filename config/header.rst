@@ -15,7 +15,5 @@ And run::
   $ sudo apt-get install emacs-pills
   $ sudo apt-get install emacs-pills-python
 
-.. image:: http://crysol.org/files/emacs.png
-
 Then, write down something like that in your ``~/.emacs`` and comment
 out undesired pills::

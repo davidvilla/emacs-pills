@@ -15,8 +15,6 @@ And run::
   $ sudo apt-get install emacs-pills
   $ sudo apt-get install emacs-pills-python
 
-.. image:: http://crysol.org/files/emacs.png
-
 Then, write down something like that in your ``~/.emacs`` and comment
 out undesired pills::
 
@@ -248,6 +246,8 @@ A very good customization for tabbar-mode.
 
 - Better faces for tabs.
 - Separate buffers in three independent groups: user files, dired and messages.
+
+.. image:: http://crysol.org/files/emacs.png
 
 Keystrokes:
 
