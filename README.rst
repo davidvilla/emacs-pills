@@ -74,8 +74,7 @@ others.
 ===============================================================================================================
 
 store and reuse compile commands
-
-C-c F5   Run all tests
+see http://nschum.de/src/emacs/compile-bookmarks/
 
 `compile.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/compile.cfg.el>`_
 ===========================================================================================
