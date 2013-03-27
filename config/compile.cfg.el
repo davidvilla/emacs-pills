@@ -49,6 +49,11 @@
 ; (add-to-list 'compilation-finish-functions 'notify-compilation-result)
 
 
+(defun open-compilation-buffer()
+    (interactive)
+    (display-buffer "*compilation*")
+    (run-at-time "2 sec" nil 'no-color-modeline))
+
 (defun compilation-exit-hook (status code msg)
   ;; If M-x compile exists with a 0
   (if (and (eq status 'exit) (zerop code))
@@ -57,9 +62,11 @@
 	  (color-modeline "orange")
 	  (progn (color-modeline "YellowGreen")
 	   (run-at-time "2 sec" nil 'no-color-modeline)))
-      (delete-windows-on (get-buffer "*compilation*"))
+      (other-buffer (get-buffer "*compilation*"))
+;      (delete-windows-on (get-buffer "*compilation*"))
       )
-    (color-modeline "OrangeRed"))
+    (progn (color-modeline "OrangeRed")
+	   (open-compilation-buffer)))
   (setq current-frame (car (car (cdr (current-frame-configuration)))))
   (select-frame-set-input-focus current-frame)
   ;; Always return the anticipated result of compilation-exit-message-function
@@ -79,8 +86,8 @@
 ;(defadvice compile (around compile/save-window-excursion first () activate)
 ;  (save-window-excursion ad-do-it))
 
-;(defadvice recompile (around compile/save-window-excursion first () activate)
-;  (save-window-excursion ad-do-it))
+(defadvice recompile (around compile/save-window-excursion first () activate)
+  (save-window-excursion ad-do-it))
 
 (defun recompile-after-save()
   (message "Compiling after saving...")
@@ -98,8 +105,4 @@
     (set-face-background 'modeline "LightBlue")
     (recompile)))
 
-(global-set-key (kbd "C-<f5>")
-  (lambda()
-    (interactive)
-    (display-buffer "*compilation*")
-    (run-at-time "2 sec" nil 'no-color-modeline)))
+(global-set-key (kbd "C-<f5>") 'open-compilation-buffer)
