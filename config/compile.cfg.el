@@ -4,8 +4,14 @@
 ;| Convenience configuration for ``compile`` command.
 ;|
 ;| - auto-save file before compilation, instead of asking.
-;| - modeline red/green showing compilation result (for 2 seconds)
-;| - F5 to run compile command.
+;| - F5 to recompile
+;| - C-F5 opens compilation buffer
+;| - modeline background color represents compilation process:
+;|
+;|   - blue: compilation in progress
+;|   - green:  compilation finished successfully
+;|   - orange: compilation finished with warnnings
+;|   - red: compilation finished with errors
 
 (setq compilation-scroll-output 'first-error)
 
@@ -86,10 +92,14 @@
 ; (add-to-list 'after-save-hook 'recompile-after-save)
 
 
-(global-set-key (kbd "<f5>") 'recompile)
+(global-set-key (kbd "<f5>")
+  (lambda()
+    (interactive)
+    (set-face-background 'modeline "LightBlue")
+    (recompile)))
 
-(global-set-key (kbd "C-<f5>") (
-   lambda()
-	 (interactive)
-	 (display-buffer "*compilation*")
-	 (run-at-time "2 sec" nil 'no-color-modeline)))
+(global-set-key (kbd "C-<f5>")
+  (lambda()
+    (interactive)
+    (display-buffer "*compilation*")
+    (run-at-time "2 sec" nil 'no-color-modeline)))

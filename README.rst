@@ -15,21 +15,40 @@ And run::
   $ sudo apt-get install emacs-pills
   $ sudo apt-get install emacs-pills-python
 
-Then, write down something like that in your ``~/.emacs``::
+Then, write down something like that in your ``~/.emacs`` and comment
+out undesired pills::
 
   (add-to-list 'load-path "/usr/share/arco/emacs")
-  (load "minimal.cfg")
-  (load "tabbar.cfg")
+  (load "auto-complete.cfg")
+  (load "auto-create-dirs.cfg")
+  (load "auto-insert.cfg")
+  (load "compile-bookmarks.cfg")
+  (load "compile.cfg")
+  (load "develock-py.cfg")
+  (load "develock.cfg")
+  (load "docbook.cfg")
+  (load "epy-nose.cfg")
+  (load "flymake.cfg")
+  (load "flyspell.cfg")
+  (load "global-zoom.cfg")
+  (load "highlight-changes.cfg")
+  (load "hl.cfg")
+  (load "latex.cfg")
   (load "maximize.cfg")
-
-adding what you want...
-
-
-.. Local Variables:
-..  coding: utf-8
-..  mode: flyspell
-..  ispell-local-dictionary: "american"
-.. End:
+  (load "minimal.cfg")
+  (load "move-line-or-region.cfg")
+  (load "paren-autoclose.cfg")
+  (load "psgml.cfg")
+  (load "python.cfg")
+  (load "rst.cfg")
+  (load "slice.cfg")
+  (load "speedbar.cfg")
+  (load "strip.cfg")
+  (load "tabbar.cfg")
+  (load "toggle-split.cfg")
+  (load "uniquify.cfg")
+  (load "window-move.cfg")
+  (load "zoom.cfg")
 
 `auto-complete.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/auto-complete.cfg.el>`_
 =======================================================================================================
@@ -56,13 +75,22 @@ others.
 
 store and reuse compile commands
 
-C-c F8   Run all tests
+C-c F5   Run all tests
 
 `compile.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/compile.cfg.el>`_
 ===========================================================================================
 
 Convenience configuration for ``compile`` command.
-- auto-save file instead of asking
+
+- auto-save file before compilation, instead of asking.
+- F5 to recompile
+- C-F5 opens compilation buffer
+- modeline background color represents compilation process:
+
+  - blue: compilation in progress
+  - green:  compilation finished successfully
+  - orange: compilation finished with warnnings
+  - red: compilation finished with errors
 
 `docbook.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/docbook.cfg.el>`_
 ===========================================================================================
@@ -74,13 +102,13 @@ nxml-mode configuration for DocBook 4.5.
 
 nose python test runner bindings:
 
-C-ca   Run all tests
-C-cM   Run module tests
-C-c.   Run current test
-C-cx   Stop nose
-C-cpa  Run all tests (run pdb on fail)
-C-cpm  Run module tests (run pdb on fail)
-C-cp.  Run current test (run pdb on fail)
+- C-ca   Run all tests
+- C-cM   Run module tests
+- C-c.   Run current test
+- C-cx   Stop nose
+- C-cpa  Run all tests (run pdb on fail)
+- C-cpm  Run module tests (run pdb on fail)
+- C-cp.  Run current test (run pdb on fail)
 
 `flymake.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/flymake.cfg.el>`_
 ===========================================================================================

@@ -15,18 +15,5 @@ And run::
   $ sudo apt-get install emacs-pills
   $ sudo apt-get install emacs-pills-python
 
-Then, write down something like that in your ``~/.emacs``::
-
-  (add-to-list 'load-path "/usr/share/arco/emacs")
-  (load "minimal.cfg")
-  (load "tabbar.cfg")
-  (load "maximize.cfg")
-
-adding what you want...
-
-
-.. Local Variables:
-..  coding: utf-8
-..  mode: flyspell
-..  ispell-local-dictionary: "american"
-.. End:
+Then, write down something like that in your ``~/.emacs`` and comment
+out undesired pills::

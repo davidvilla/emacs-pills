@@ -33,6 +33,11 @@ def module_doc(fname):
 doc = file(sys.argv[1], 'w')
 doc.write(file('header.rst').read() + '\n')
 
+for line in file('../template.el').readlines():
+    doc.write('  ' + line)
+
+doc.write('\n')
+
 for fname in sorted(glob.glob('*.cfg.el')):
     doc.write(module_doc(fname))
 
