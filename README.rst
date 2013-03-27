@@ -15,6 +15,8 @@ And run::
   $ sudo apt-get install emacs-pills
   $ sudo apt-get install emacs-pills-python
 
+.. image:: http://crysol.org/files/emacs.png
+
 Then, write down something like that in your ``~/.emacs`` and comment
 out undesired pills::
 
@@ -74,7 +76,8 @@ others.
 ===============================================================================================================
 
 store and reuse compile commands
-see http://nschum.de/src/emacs/compile-bookmarks/
+
+See http://nschum.de/src/emacs/compile-bookmarks/
 
 `compile.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/compile.cfg.el>`_
 ===========================================================================================
