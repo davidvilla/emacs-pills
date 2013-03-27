@@ -1,5 +1,6 @@
 ;| store and reuse compile commands
-;| see http://nschum.de/src/emacs/compile-bookmarks/
+;|
+;| See http://nschum.de/src/emacs/compile-bookmarks/
 
 (require 'compile-bookmarks)
 (compile-bookmarks-mode 1)
