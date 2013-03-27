@@ -1,9 +1,5 @@
-; http://nschum.de/src/emacs/compile-bookmarks/
-
 ;| store and reuse compile commands
-;|
-;| C-c F5   Run all tests
-
+;| see http://nschum.de/src/emacs/compile-bookmarks/
 
 (require 'compile-bookmarks)
 (compile-bookmarks-mode 1)
