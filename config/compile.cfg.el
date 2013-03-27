@@ -12,6 +12,9 @@
 ;|   - green:  compilation finished successfully
 ;|   - orange: compilation finished with warnnings
 ;|   - red: compilation finished with errors
+;|
+;| (new in version 0.20130327)
+
 
 (setq compilation-scroll-output 'first-error)
 

@@ -1,3 +1,10 @@
+0.20130327
+==========
+
+* compile-bookmarks.cfg and compilation.cfg
+* module compile-bookmark.el
+* module epy-nose.el
+
 0.20120904
 ==========
 

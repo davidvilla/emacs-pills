@@ -1,4 +1,10 @@
-emacs-pills (0.20130314-2) UNRELEASED; urgency=low
+emacs-pills (0.20130327-1) unstable; urgency=low
+
+  * New release
+
+ -- David Villa Alises <David.Villa@gmail.com>  Wed, 27 Mar 2013 19:39:32 +0100
+
+emacs-pills (0.20130314-2) unstable; urgency=low
 
   * New release
 

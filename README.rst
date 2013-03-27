@@ -77,6 +77,8 @@ store and reuse compile commands
 
 See http://nschum.de/src/emacs/compile-bookmarks/
 
+(new in version 0.20130327)
+
 `compile.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/compile.cfg.el>`_
 ===========================================================================================
 
@@ -91,6 +93,8 @@ Convenience configuration for ``compile`` command.
   - green:  compilation finished successfully
   - orange: compilation finished with warnnings
   - red: compilation finished with errors
+
+(new in version 0.20130327)
 
 `docbook.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/docbook.cfg.el>`_
 ===========================================================================================
@@ -109,6 +113,8 @@ nose python test runner bindings:
 - C-cpa  Run all tests (run pdb on fail)
 - C-cpm  Run module tests (run pdb on fail)
 - C-cp.  Run current test (run pdb on fail)
+
+(new in version 0.20130327)
 
 `flymake.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/flymake.cfg.el>`_
 ===========================================================================================

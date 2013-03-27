@@ -9,6 +9,9 @@
 ;| - C-cpa  Run all tests (run pdb on fail)
 ;| - C-cpm  Run module tests (run pdb on fail)
 ;| - C-cp.  Run current test (run pdb on fail)
+;|
+;| (new in version 0.20130327)
+
 
 (require 'nose)
 
