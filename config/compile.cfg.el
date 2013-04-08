@@ -4,14 +4,19 @@
 ;| Convenience configuration for ``compile`` command.
 ;|
 ;| - auto-save file before compilation, instead of asking.
-;| - F5 to recompile
-;| - C-F5 opens compilation buffer
 ;| - modeline background color represents compilation process:
 ;|
 ;|   - blue: compilation in progress
 ;|   - green:  compilation finished successfully
 ;|   - orange: compilation finished with warnnings
 ;|   - red: compilation finished with errors
+;|
+;| Keystrokes:
+;|
+;| - F5 recompile
+;| - C-F5 opens compilation buffer
+;|
+
 
 (setq compilation-scroll-output 'first-error)
 
