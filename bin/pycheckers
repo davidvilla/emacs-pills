@@ -45,7 +45,7 @@ default_checkers = 'pep8, pyflakes'
 # A list of error codes to ignore.
 # default_ignore_codes = ['E225', 'W114']
 default_ignore_codes = "E221,E241,E251,E501,W391".split(',')
-default_ignore_codes = "W391".split(',')
+default_ignore_codes = "W391,E501".split(',')
 
 ## End of customization ##
 
