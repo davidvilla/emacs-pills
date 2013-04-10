@@ -109,11 +109,10 @@
 ;http://vwood.github.com/emacs-compile-on-save.html
 ;; Prevent compilation buffer from showing up
 
-(defun hide-compilation-buffer
-  (lambda()
-	(defadvice compile (around compile/save-window-excursion first () activate)
-	  (save-window-excursion ad-do-it))
-	))
+;(defun hide-compilation-buffer
+;  (defadvice compile (around compile/save-window-excursion first () activate)
+;    (save-window-excursion ad-do-it))
+;  )
 
 ; (hide-compilation-buffer)
 

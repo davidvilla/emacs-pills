@@ -11,8 +11,8 @@ DOCBOOK=http://www.oasis-open.org/docbook/rng/4.5
 WGET=wget --no-check-certificate -nv
 
 all:
-	find config -name "*.cfg.el" | awk '{print "(byte-compile-file \"" $$1 "\")";}' > compile.el
-	/usr/bin/emacs -L modules -batch -l compile.el -kill
+	find config -name "*.cfg.el" | awk '{print "(byte-compile-file \"" $$1 "\")";}' > bytecompile.el
+	/usr/bin/emacs -L modules -batch -l bytecompile.el -kill
 
 clean:
 	$(RM) $(shell find -name *~)
