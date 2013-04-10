@@ -29,3 +29,8 @@
 ;;       '((output-dvi "DVI Viewer")
 ;;         (output-pdf "PDF Viewer")
 ;;         (output-html "HTML Viewer")))
+
+
+
+(load "auctex.el" nil t t)`
+(add-hook 'LaTeX-mode-hook 'flyspell-mode)
