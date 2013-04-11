@@ -88,6 +88,8 @@ See the screencast:
 .. |compile-screencast| image:: http://i4.ytimg.com/vi/34B3mkPj01s/3.jpg?time=1365699591540
 .. _compile-screencast: http://youtu.be/34B3mkPj01s
 
+Features:
+
 - auto-save file before compilation, instead of asking.
 - modeline background color represents compilation process:
 
