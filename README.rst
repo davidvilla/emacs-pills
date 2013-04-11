@@ -259,7 +259,7 @@ A very good customization for tabbar-mode.
 
 Keystrokes:
 
-- M-<n> for the first 10 tabs
+- M-<n> to change among the first 10 tabs
 - C-S-left and C-S-right to change among buffers in the same group.
 - C-S-up and C-S-down to change among groups.
 
