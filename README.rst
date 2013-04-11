@@ -82,10 +82,11 @@ See http://nschum.de/src/emacs/compile-bookmarks/
 
 Convenience configuration for ``compile`` command.
 
-See the |screencast|_:
+See the screencast:
+|compile-screencast|_:
 
-.. |screencast| image:: http://i4.ytimg.com/vi/34B3mkPj01s/3.jpg?time=1365699591540
-.. _screencast: http://youtu.be/34B3mkPj01s
+.. |compile-screencast| image:: http://i4.ytimg.com/vi/34B3mkPj01s/3.jpg?time=1365699591540
+.. _compile-screencast: http://youtu.be/34B3mkPj01s
 
 - auto-save file before compilation, instead of asking.
 - modeline background color represents compilation process:
