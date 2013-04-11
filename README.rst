@@ -10,6 +10,12 @@ package adding next line to your ``/etc/apt/sources.list``::
 
   deb http://babel.esi.uclm.es/arco sid main
 
+
+I recommend you try |Python|_.
+
+.. |Python| image:: http://www.python.org/images/python-logo.gif
+.. _Python: http://www.python.org/
+
 And run::
 
   $ sudo apt-get install emacs-pills
@@ -302,4 +308,3 @@ Keystrokes:
 - C-<plus> or C-mousewheel-up: increases font size.
 - C-<minus> or C-mousewheel-down: decreases font size.
 - C-0 reverts font size to default.
-
