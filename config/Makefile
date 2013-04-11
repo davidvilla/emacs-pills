@@ -1,6 +1,6 @@
 SOURCES=$(wildcard *.cfg.el)
 
-all: README.rst template.el
+all: ../README.rst template.el
 	find . -name "*.cfg.el" | awk '{print "(byte-compile-file \"" $$1 "\")";}' > bytecompile.el
 	/usr/bin/emacs -L ../modules -batch -l bytecompile.el -kill
 
@@ -10,7 +10,7 @@ all: README.rst template.el
 %.1: $.rst $(SOURCES) gen-doc.py
 	rst2man $< $@
 
-README.rst: $(SOURCES) Makefile header.rst gen-doc.py
+../README.rst: $(SOURCES) Makefile header.rst gen-doc.py
 	./gen-doc.py $@
 
 template.el: $(SOURCES)

@@ -4,7 +4,7 @@
 import sys
 from time import sleep
 from commodity.os_ import SubProcess
-from gexter.gext import mouse, keyboard, Keyboard, UserNote
+from gexter.gext import mouse, keyboard, Keyboard
 
 
 def k(keys):
@@ -43,9 +43,9 @@ k('<Shift_L><7>tmp<Shift_L><7>hello<period>c<Return>')
 # main
 k('main<Tab>')
 k('<Control_L><End><Return><Return>')
-comment("// Ready to compile: M-x compile, make hello")
+comment("// Ready to compile: F5 and enter command 'make hello'")
 
-k('<Alt_L>xcompile<Return>')
+k('<F5>')
 k('<Control_L>a<Control_L>kmake hello<Return>')
 
 comment("// Green modeline means SUCCESS")
@@ -92,5 +92,5 @@ mouse.leftClick()
 k('stdio<period>h<Tab>')
 k('<F5>')
 
-comment("// That's all<Return>// This feature is available in 'emacs-pills'")
+comment("// That's all<Return>// This feature is available in 'emacs-pills'<Return>// https://bitbucket.org/arco_group/emacs-pills")
 save()
