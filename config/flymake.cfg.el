@@ -13,4 +13,5 @@
      (:background "#ffeecc" :foreground "gray10"))))
 )
 
+(defvar flymake-no-changes-timeout)
 (setq flymake-no-changes-timeout 2)

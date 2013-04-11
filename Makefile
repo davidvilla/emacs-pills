@@ -11,13 +11,11 @@ DOCBOOK=http://www.oasis-open.org/docbook/rng/4.5
 WGET=wget --no-check-certificate -nv
 
 all:
-	find config -name "*.cfg.el" | awk '{print "(byte-compile-file \"" $$1 "\")";}' > bytecompile.el
-	/usr/bin/emacs -L modules -batch -l bytecompile.el -kill
+	make -C config
 
 clean:
 	$(RM) $(shell find -name *~)
-	find . -name "*.elc" -delete
-	$(RM) compile.el
+	make -C config clean
 
 install:
 	install -vd $(BASE)
@@ -34,7 +32,7 @@ install:
 
 	install -vd $(EMACS)
 	install -vm 444 config/*.cfg.elc $(EMACS)/
-	install -vm 444 template.el $(EMACS)/
+	install -vm 444 config/template.el $(EMACS)/
 	install -vm 444 modules/*.el $(EMACS)/
 
 	install -vm 444 config/schemas.xml $(EMACS)/

@@ -1,6 +1,8 @@
 SOURCES=$(wildcard *.cfg.el)
 
-all: ../README.rst ../template.el
+all: README.rst template.el
+	find . -name "*.cfg.el" | awk '{print "(byte-compile-file \"" $$1 "\")";}' > bytecompile.el
+	/usr/bin/emacs -L ../modules -batch -l bytecompile.el -kill
 
 %.html: %.rst $(SOURCES) gen-doc.py
 	rst2html --generator --date --stylesheet ./style.css $< $@
@@ -8,14 +10,16 @@ all: ../README.rst ../template.el
 %.1: $.rst $(SOURCES) gen-doc.py
 	rst2man $< $@
 
-../README.rst: $(SOURCES) Makefile header.rst gen-doc.py
+README.rst: $(SOURCES) Makefile header.rst gen-doc.py
 	./gen-doc.py $@
 
-../template.el: $(SOURCES)
+template.el: $(SOURCES)
 	@echo \(add-to-list \'load-path \"/usr/share/arco/emacs\"\) > $@
 	@for f in *.cfg.el; do \
 	   echo \(load \"$$(basename $$f .el)\"\) >> $@; \
 	done
 
 clean:
-	$(RM) *.html *.elc *.1 modular-emacs-conf.rst
+	$(RM) *.html *.elc *.1
+	find . -name "*.elc" -delete
+	$(RM) bytecompile.el

@@ -34,6 +34,7 @@
 
 ; dabbrev expansion is always copied verbatim
 ; http://www.gnu.org/software/libtool/manual/emacs/Dabbrev-Customization.html
+(defvar dabbrev-case-replace)
 (setq dabbrev-case-replace nil)
 
 ; use the clipboard, pretty please, so that copy/paste "works"

@@ -20,6 +20,8 @@
 ; References:
 ; - http://vwood.github.com/emacs-compile-on-save.html
 ; - http://comments.gmane.org/gmane.emacs.devel/156498
+; - from http://emacswiki.org/emacs/CompileCommand (Xu Yuan)
+; - http://emacswiki.org/emacs/CompileCommand (Recompiling)
 
 (setq compilation-scroll-output 'first-error)
 
@@ -27,6 +29,7 @@
 ; http://stackoverflow.com/questions/2062492/save-and-compile-automatically
 (setq compilation-ask-about-save nil)
 
+(defvar modeline-timer)
 (setq modeline-timer nil)
 
 ; http://lazywithclass.posterous.com/emacs-functions-to-ease-tdd
@@ -46,46 +49,23 @@
   (setq modeline-timer
 		(run-at-time "2 sec" nil 'modeline-set-color nil)))
 
-; (defun no-color-modeline()
-;   "No color for the modeline"
-;   (interactive)
-;   (set-face-background 'modeline nil))
-
-
-; from http://emacswiki.org/emacs/CompileCommand (Xu Yuan)
-; (defun notify-compilation-result(buffer msg)
-;   "Notify that the compilation is finished,
-; close the *compilation* buffer if the compilation is successful,
-; and set the focus back to Emacs frame"
-;   (if (string-match "^finished" msg)
-;     (progn
-;      (delete-windows-on buffer)
-;      (color-modeline 0))
-;     (color-modeline 1))
-;   (setq current-frame (car (car (cdr (current-frame-configuration)))))
-;   (select-frame-set-input-focus current-frame)
-;   )
-;
-; (add-to-list 'compilation-finish-functions 'notify-compilation-result)
-
-
 (defun open-compilation-buffer()
     (interactive)
     (display-buffer "*compilation*")
 	(modeline-delayed-clean)
 	)
 
-
 (defun compilation-exit-hook (status code msg)
   ;; If M-x compile exists with a 0
+  (defvar current-frame)
   (if (and (eq status 'exit) (zerop code))
     (progn
       (if (string-match "warning:" (buffer-string))
-		  (modeline-set-color "orange")
-		  (progn (modeline-set-color "YellowGreen")
-				 (modeline-delayed-clean)))
-;				 (run-at-time "2 sec" nil 'modeline-set-color nil)))
+	  (modeline-set-color "orange")
+          (modeline-set-color "YellowGreen")
+      )
       (other-buffer (get-buffer "*compilation*"))
+      (modeline-delayed-clean)
 ;      (delete-windows-on (get-buffer "*compilation*"))
       )
     (progn
@@ -106,9 +86,6 @@
 ;     (when (bury-buffer buffer)
 ;       (replace-buffer-in-windows buffer))))
 
-;http://vwood.github.com/emacs-compile-on-save.html
-;; Prevent compilation buffer from showing up
-
 ;(defun hide-compilation-buffer
 ;  (defadvice compile (around compile/save-window-excursion first () activate)
 ;    (save-window-excursion ad-do-it))
@@ -119,28 +96,8 @@
 (defadvice recompile (around compile/save-window-excursion first () activate)
    (save-window-excursion ad-do-it))
 
-; (defun recompile-after-save()
-;   (message "Compiling after saving...")
-; ;  (interactive)
-; ;  (ignore-errors (kill-compilation))
-;   (recompile)
-;   )
-; ;
-; ; (add-to-list 'after-save-hook 'recompile-after-save)
-
-
-; (global-set-key (kbd "<f5>")
-;   (lambda()
-;     (interactive)
-;     (set-face-background 'modeline "LightBlue")
-; 	(recompile)))
-
 (global-set-key (kbd "<f5>")  'compile-again)
 (global-set-key (kbd "C-<f5>") 'open-compilation-buffer)
-
-
-; http://emacswiki.org/emacs/CompileCommand - (Recompiling)
-; (global-set-key [(control c) (c)] 'compile-again)
 
 (setq compilation-last-buffer nil)
 (defun compile-again (pfx)
@@ -149,8 +106,8 @@
      If there was no last time, or there is a prefix argument, this acts like
      M-x compile.
   """
- (interactive "p")
  (save-some-buffers 1)
+ (interactive "p")
  (if compilation-last-buffer
      (progn
        (set-buffer compilation-last-buffer)

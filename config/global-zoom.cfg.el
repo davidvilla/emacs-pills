@@ -13,6 +13,8 @@
 
 ; http://www.emacswiki.org/emacs/GlobalTextScaleMode
 
+(defvar text-scale-mode-amount)
+
 (define-globalized-minor-mode
     global-text-scale-mode
     text-scale-mode

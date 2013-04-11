@@ -5,16 +5,22 @@
 ;|
 ;|   M-x flymake-mode
 
-(setq TeX-auto-save t)
 
-(setq TeX-parse-self t) ; Enable parse on load.
+(defvar TeX-auto-save)
 (setq TeX-auto-save t) ; Enable parse on save.
+
+(defvar TeX-auto-local)
 (setq TeX-auto-local "")
+
+(defvar TeX-parse-self)
+(setq TeX-parse-self t) ; Enable parse on load.
 
 (setq-default TeX-master "main")
 
 ; Activate and connect RefTeX
 (add-hook 'LaTeX-mode-hook 'turn-on-reftex)
+
+(defvar reftex-plug-into-AUCTeX)
 (setq reftex-plug-into-AUCTeX t)
 
 ;(add-hook 'LaTeX-mode-hook 'LaTeX-math-mode)

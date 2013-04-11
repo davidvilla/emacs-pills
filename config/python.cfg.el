@@ -8,6 +8,8 @@
 ; avoid warnings
 (declare-function flymake-init-create-temp-buffer-copy "flymake.el")
 
+
+(defvar flymake-allowed-file-name-masks)
 (when (load "flymake" t)
   (defun flymake-python-checker-init ()
 	(let* ((temp-file (flymake-init-create-temp-buffer-copy
@@ -31,5 +33,5 @@
 
 (add-hook 'post-command-hook 'my-flymake-show-help)
 
-
+(defvar python-check-command)
 (setq python-check-command "pyflakes")

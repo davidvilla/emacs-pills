@@ -24,8 +24,6 @@ out undesired pills::
   (load "auto-insert.cfg")
   (load "compile-bookmarks.cfg")
   (load "compile.cfg")
-  (load "develock-py.cfg")
-  (load "develock.cfg")
   (load "docbook.cfg")
   (load "epy-nose.cfg")
   (load "flymake.cfg")
