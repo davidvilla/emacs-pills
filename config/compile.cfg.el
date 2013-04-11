@@ -3,6 +3,7 @@
 ;| Convenience configuration for ``compile`` command.
 ;|
 ;| See the screencast:
+;|
 ;| |compile-screencast|_:
 ;|
 ;| .. |compile-screencast| image:: http://i4.ytimg.com/vi/34B3mkPj01s/3.jpg?time=1365699591540
