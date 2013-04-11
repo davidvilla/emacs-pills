@@ -1,6 +1,8 @@
 ; -*- mode:lisp -*-
 
-;| Convenience configuration for ``compile`` command.
+;| Convenience configuration for ``compile`` command. See the `compile-screencast`_.
+;|
+;| .. _compile-screencast: http://youtu.be/34B3mkPj01s
 ;|
 ;| - auto-save file before compilation, instead of asking.
 ;| - modeline background color represents compilation process:

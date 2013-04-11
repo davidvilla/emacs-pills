@@ -80,7 +80,9 @@ See http://nschum.de/src/emacs/compile-bookmarks/
 `compile.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/compile.cfg.el>`_
 ===========================================================================================
 
-Convenience configuration for ``compile`` command.
+Convenience configuration for ``compile`` command. See the `compile-screencast`_.
+
+.. _compile-screencast: http://youtu.be/34B3mkPj01s
 
 - auto-save file before compilation, instead of asking.
 - modeline background color represents compilation process:
