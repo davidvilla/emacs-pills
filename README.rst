@@ -18,7 +18,7 @@ And run::
 Then, write down something like that in your ``~/.emacs`` and comment
 out undesired pills::
 
-  (add-to-list 'load-path "/usr/share/arco/emacs")
+  (add-to-list 'load-path "/usr/share/emacs-pills")
   (load "auto-complete.cfg")
   (load "auto-create-dirs.cfg")
   (load "auto-insert.cfg")
