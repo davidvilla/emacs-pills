@@ -28,5 +28,6 @@ usr/share/emacs-pills/toggle-split.cfg.elc
 usr/share/emacs-pills/uniquify.cfg.elc
 usr/share/emacs-pills/window-move.cfg.elc
 usr/share/emacs-pills/zoom.cfg.elc
+usr/share/arco/emacs/
 usr/share/emacs/site-lisp/yasnippet/snippets/text-mode/
 usr/share/emacs/site-lisp/yasnippet/snippets/text-mode/python-mode/

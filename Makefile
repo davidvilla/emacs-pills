@@ -19,7 +19,7 @@ clean:
 install:
 	install -vd $(BASE)
 	install -vd $(DESTDIR)/usr/share/arco
-	ln -s $(BASE) $(DESTDIR)/usr/share/arco/
+	ln -s $(BASE) $(DESTDIR)/usr/share/arco/emacs
 
 	install -v -m 755 bin/* $(BASE)/
 
