@@ -59,7 +59,7 @@ activated by default. You must run::
 `auto-create-dirs.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/auto-create-dirs.cfg.el>`_
 =============================================================================================================
 
-Create intermediate directories when saving a new file
+Create intermediate directories when saving a new file in a non existing path.
 
 `auto-insert.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/auto-insert.cfg.el>`_
 ===================================================================================================
@@ -153,8 +153,10 @@ Keystrokes:
 - C-<minus> or C-mousewheel-down: decreases font size.
 - C-0 reverts font size to default.
 
-In contrast to zoom.cfg this version persists across multiple areas
+In contrast to `zoom.cfg`_ this version persists across multiple areas
 of the document with specific minor modes (e.g. noweb documents)
+
+.. _zoom.cfg: https://bitbucket.org/arco_group/emacs-pills/src/tip/config/zoom.cfg.el
 
 `highlight-changes.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/highlight-changes.cfg.el>`_
 ===============================================================================================================
@@ -164,7 +166,7 @@ modifications since file open.
 
 Keystrokes:
 
-F6: shows/hide hightlight (deactivated by default).
+- F6: shows/hide hightlight (deactivated by default).
 
 `hl.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/hl.cfg.el>`_
 =================================================================================

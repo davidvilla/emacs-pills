@@ -7,7 +7,7 @@
 ;|
 ;| Keystrokes:
 ;|
-;| F6: shows/hide hightlight (deactivated by default).
+;| - F6: shows/hide hightlight (deactivated by default).
 
 (global-highlight-changes-mode t)
 (defvar highlight-changes-visibility-initial-state)

@@ -1,6 +1,6 @@
 ; -*- mode:lisp -*-
 
-;| Create intermediate directories when saving a new file
+;| Create intermediate directories when saving a new file in a non existing path.
 
 ; http://stackoverflow.com/questions/6830671/how-to-make-emacs-create-intermediate-dirs-when-saving-a-file
 
