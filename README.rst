@@ -10,12 +10,6 @@ package adding next line to your ``/etc/apt/sources.list``::
 
   deb http://babel.esi.uclm.es/arco sid main
 
-
-I recommend you try |Python|_.
-
-.. |Python| image:: http://www.python.org/images/python-logo.gif
-.. _Python: http://www.python.org/
-
 And run::
 
   $ sudo apt-get install emacs-pills
@@ -86,9 +80,12 @@ See http://nschum.de/src/emacs/compile-bookmarks/
 `compile.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/compile.cfg.el>`_
 ===========================================================================================
 
-Convenience configuration for ``compile`` command. See the `compile-screencast`_.
+Convenience configuration for ``compile`` command.
 
-.. _compile-screencast: http://youtu.be/34B3mkPj01s
+See the |screencast|_:
+
+.. |screencast| image:: http://i4.ytimg.com/vi/34B3mkPj01s/3.jpg?time=1365699591540
+.. _screencast: http://youtu.be/34B3mkPj01s
 
 - auto-save file before compilation, instead of asking.
 - modeline background color represents compilation process:
@@ -308,3 +305,4 @@ Keystrokes:
 - C-<plus> or C-mousewheel-up: increases font size.
 - C-<minus> or C-mousewheel-down: decreases font size.
 - C-0 reverts font size to default.
+
