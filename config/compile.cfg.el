@@ -12,7 +12,8 @@
 ;|
 ;| Keystrokes:
 ;|
-;| - F5 recompile
+;| - F5 compile (using last given compile command)
+;| - Super-F5 asks for a new compile command
 ;| - C-F5 opens compilation buffer
 ;|
 ;| (new in version 0.20130327)
@@ -96,9 +97,6 @@
 (defadvice recompile (around compile/save-window-excursion first () activate)
    (save-window-excursion ad-do-it))
 
-(global-set-key (kbd "<f5>")  'compile-again)
-(global-set-key (kbd "C-<f5>") 'open-compilation-buffer)
-
 (setq compilation-last-buffer nil)
 (defun compile-again (pfx)
   """Run the same compile as the last time.
@@ -116,3 +114,14 @@
 	   (recompile)
 	   )
    (call-interactively 'compile)))
+
+(defun ask-new-compile-command ()
+  (interactive)
+  (setq compilation-last-buffer nil)
+  (compile-again 1)
+  )
+
+
+(global-set-key (kbd "<f5>")  'compile-again)
+(global-set-key (kbd "s-<f5>") 'ask-new-compile-command)
+(global-set-key (kbd "C-<f5>") 'open-compilation-buffer)

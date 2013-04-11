@@ -92,7 +92,8 @@ Convenience configuration for ``compile`` command.
 
 Keystrokes:
 
-- F5 recompile
+- F5 compile (using last given compile command)
+- Super-F5 asks for a new compile command
 - C-F5 opens compilation buffer
 
 (new in version 0.20130327)
