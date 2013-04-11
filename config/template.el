@@ -1,4 +1,4 @@
-(add-to-list 'load-path "/usr/share/arco/emacs")
+(add-to-list 'load-path "/usr/share/emacs-pills")
 (load "auto-complete.cfg")
 (load "auto-create-dirs.cfg")
 (load "auto-insert.cfg")

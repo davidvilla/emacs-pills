@@ -3,8 +3,7 @@
 
 DESTDIR?=~
 
-BASE=$(DESTDIR)/usr/share/arco
-EMACS=$(DESTDIR)/usr/share/arco/emacs
+BASE=$(DESTDIR)/usr/share/emacs-pills
 YASNIPPET=$(DESTDIR)/usr/share/emacs/site-lisp/yasnippet/snippets/text-mode
 DOCBOOK=http://www.oasis-open.org/docbook/rng/4.5
 
@@ -19,6 +18,9 @@ clean:
 
 install:
 	install -vd $(BASE)
+	install -vd $(DESTDIR)/usr/share/arco
+	ln -s $(BASE) $(DESTDIR)/usr/share/arco/
+
 	install -v -m 755 bin/* $(BASE)/
 
 	install -vd $(YASNIPPET)
@@ -30,21 +32,21 @@ install:
 	install -vd $(YASNIPPET)/latex-mode
 	install -v -m 444 yasnippet/text-mode/latex-mode/*.yasnippet $(YASNIPPET)/latex-mode/
 
-	install -vd $(EMACS)
-	install -vm 444 config/*.cfg.elc $(EMACS)/
-	install -vm 444 config/template.el $(EMACS)/
-	install -vm 444 modules/*.el $(EMACS)/
+	install -vd $(BASE)
+	install -vm 444 config/*.cfg.elc $(BASE)/
+	install -vm 444 config/template.el $(BASE)/
+	install -vm 444 modules/*.el $(BASE)/
 
-	install -vm 444 config/schemas.xml $(EMACS)/
-	@$(WGET) $(DOCBOOK)/docbook.rnc  -O $(EMACS)/docbook.rnc
-	@$(WGET) $(DOCBOOK)/dbnotnx.rnc  -O $(EMACS)/dbnotnx.rnc
-	@$(WGET) $(DOCBOOK)/dbpoolx.rnc  -O $(EMACS)/dbpoolx.rnc
-	@$(WGET) $(DOCBOOK)/htmltblx.rnc -O $(EMACS)/htmltblx.rnc
-	@$(WGET) $(DOCBOOK)/calstblx.rnc -O $(EMACS)/calstblx.rnc
-	@$(WGET) $(DOCBOOK)/dbhierx.rnc  -O $(EMACS)/dbhierx.rnc
+	install -vm 444 config/schemas.xml $(BASE)/
+	@$(WGET) $(DOCBOOK)/docbook.rnc  -O $(BASE)/docbook.rnc
+	@$(WGET) $(DOCBOOK)/dbnotnx.rnc  -O $(BASE)/dbnotnx.rnc
+	@$(WGET) $(DOCBOOK)/dbpoolx.rnc  -O $(BASE)/dbpoolx.rnc
+	@$(WGET) $(DOCBOOK)/htmltblx.rnc -O $(BASE)/htmltblx.rnc
+	@$(WGET) $(DOCBOOK)/calstblx.rnc -O $(BASE)/calstblx.rnc
+	@$(WGET) $(DOCBOOK)/dbhierx.rnc  -O $(BASE)/dbhierx.rnc
 
-	install -vd $(EMACS)/template
-	install -vm 444 template/* $(EMACS)/template/
+	install -vd $(BASE)/template
+	install -vm 444 template/* $(BASE)/template/
 
 
 gen-doc:

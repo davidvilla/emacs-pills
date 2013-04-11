@@ -4,7 +4,7 @@
 (load "compile.cfg")
 
   (setq initial-frame-alist
-		'((top . 0) (left . 1000)
+		'((top . 40) (left . 10)
 		  (width . 90)(height . 55)
 		  (background-color . "Gray94")
 		  (cursor-color	. "red3")

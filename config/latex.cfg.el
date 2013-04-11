@@ -27,7 +27,7 @@
 (add-hook 'LaTeX-mode-hook 'turn-on-auto-fill)
 
 (defun flymake-get-tex-args (file-name)
-  (list "/usr/share/arco/flymake-latex-checker" (list file-name)))
+  (list "/usr/share/emacs-pills/flymake-latex-checker" (list file-name)))
 
 
 ; http://wikemacs.org/wiki/AUCTeX

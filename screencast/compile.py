@@ -2,6 +2,10 @@
 # -*- mode: python; coding: utf-8 -*-
 
 import sys
+import os
+import time
+import signal
+
 from time import sleep
 from commodity.os_ import SubProcess
 from gexter.gext import mouse, keyboard, Keyboard
@@ -26,19 +30,21 @@ def close_compilation():
     k('<Control_L>x1')
 
 
+recorder = SubProcess('/usr/bin/recordmydesktop --no-sound --full-shots -x 10 -y 45 --width 775 --height 580 --delay 4 compile.ogv')
+# --no-cursor
+
 SubProcess('rm /tmp/hello.c').wait()
 emacs = SubProcess('/usr/bin/emacs --no-splash -q -l init.el -g 80x25')
 sleep(3)
 
-mouse.moveAbsTo(767, 345)
-mouse.leftClick()
-
 # new file: /tmp/hello.c
 k('<Alt_L>xerase-buffer<Return>y')
-comment("; Lets to create a minimal C program at '/tmp/hello.c'")
+comment("; The emacs 'compile' command works for any language or anything...")
+comment("; As example lets to create a minimal C program at '/tmp/hello.c'.")
 
 k('<Control_L>x<Control_L>f')
-k('<Shift_L><7>tmp<Shift_L><7>hello<period>c<Return>')
+k('<Shift_L><7>tmp<Shift_L><7>hello<period>c')
+k('<Return>')
 
 # main
 k('main<Tab>')
@@ -46,7 +52,8 @@ k('<Control_L><End><Return><Return>')
 comment("// Ready to compile: F5 and enter command 'make hello'")
 
 k('<F5>')
-k('<Control_L>a<Control_L>kmake hello<Return>')
+k('<Control_L>a<Control_L>kmake hello')
+k('<Return>')
 
 comment("// Green modeline means SUCCESS")
 close_compilation()
@@ -68,7 +75,7 @@ k('<Up><Up><Up><Up>')
 k('<Control_L>a<Control_L>k')
 k('<F5>')
 
-comment("// Green, all right again ('compile buffer' is not shown)")
+comment("// Green, all right again ('compilation buffer' is not shown)")
 
 comment("// Lets to add some code")
 
@@ -77,7 +84,7 @@ k('<Up><Up><Up><Up>')
 k('printf("hi");')
 k('<F5>')
 
-comment("// Orange, that is a warning ('compile buffer' is not shown)")
+comment("// Orange, that is a warning ('compilation buffer' is not shown)")
 
 comment("// But you can see it pressing Control-F5")
 
@@ -87,10 +94,13 @@ close_compilation()
 
 k('<Control_L><Home><Control_L>o')
 k('inc<Tab>')
-mouse.moveAbsTo(779, 240)
+mouse.moveAbsTo(100, 260)
 mouse.leftClick()
 k('stdio<period>h<Tab>')
 k('<F5>')
 
-comment("// That's all<Return>// This feature is available in 'emacs-pills'<Return>// https://bitbucket.org/arco_group/emacs-pills")
+comment("// That's all<Return>// This feature is available in 'emacs-pills' (module 'compile.cfg')<Return>// https://bitbucket.org/arco_group/emacs-pills<Return><Return>// This screenshot was made using gexter and recordmydesktop<Return><Return>// David.Villa@gmail.com (@david_vi11a)")
 save()
+
+time.sleep(1)
+os.kill(recorder.pid, signal.SIGTERM)

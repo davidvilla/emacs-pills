@@ -1,5 +1,5 @@
-usr/share/arco/flymake-python-checker
-usr/share/arco/pycheckers
-usr/share/arco/emacs/python.cfg.elc
-usr/share/arco/emacs/epy-nose.cfg.elc
-usr/share/arco/emacs/nose.el
+usr/share/emacs-pills/flymake-python-checker
+usr/share/emacs-pills/pycheckers
+usr/share/emacs-pills/python.cfg.elc
+usr/share/emacs-pills/epy-nose.cfg.elc
+usr/share/emacs-pills/nose.el
