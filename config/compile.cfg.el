@@ -3,7 +3,8 @@
 ;| Convenience configuration for ``compile`` command.
 ;|
 ;| See the screencast:
-;| ::
+;|
+;| .
 ;|
 ;|    |compile-screencast|_
 ;|
