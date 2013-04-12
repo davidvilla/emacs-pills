@@ -107,14 +107,13 @@
    (save-window-excursion ad-do-it))
 
 (setq compilation-last-buffer nil)
-(defun compile-again (pfx)
-  """Run the same compile as the last time.
+(defun compile-again ()
+   "Run the same compile as the last time.
 
-     If there was no last time, or there is a prefix argument, this acts like
-     M-x compile.
-  """
+      If there was no last time, or there is a prefix argument, this acts like
+      M-x compile."
+ (interactive)
  (save-some-buffers 1)
- (interactive "p")
  (if compilation-last-buffer
      (progn
        (set-buffer compilation-last-buffer)
@@ -127,7 +126,7 @@
 (defun ask-new-compile-command ()
   (interactive)
   (setq compilation-last-buffer nil)
-  (compile-again 1)
+  (compile-again)
   )
 
 
