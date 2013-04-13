@@ -14,11 +14,15 @@ Breaks: arco-devel (<< 0.20120213)
 Replaces: arco-emacs, arco-devel (<< 0.20120213)
 Suggests: libnotify-bin
 Description: Modular emacs configuration
- Emacs configuration and utilities for everybody
+ emacs configuration files and utilities for everybody. It is a
+ colection of configuration files ready to use and that may be used
+ togheter without issues.
 
 Package: emacs-pills-python
 Architecture: all
 Depends: ${misc:Depends}, emacs-pills, pylint, pep8, pyflakes, python
 Replaces: arco-emacs-python
 Description: Python emacs support
- Emacs configuration and utilities for Python programmers
+ emacs configuration files and utilities for Python programmers. It is
+ a colection of configuration files ready to use and that may be used
+ togheter without issues.

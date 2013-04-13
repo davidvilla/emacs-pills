@@ -4,6 +4,7 @@
 DESTDIR?=~
 
 BASE=$(DESTDIR)/usr/share/emacs-pills
+OLDBASE=$(DESTDIR)/usr/share/arco/emacs
 YASNIPPET=$(DESTDIR)/usr/share/emacs/site-lisp/yasnippet/snippets/text-mode
 DOCBOOK=http://www.oasis-open.org/docbook/rng/4.5
 
@@ -18,8 +19,8 @@ clean:
 
 install:
 	install -vd $(BASE)
-	install -vd $(DESTDIR)/usr/share/arco
-	ln -s $(BASE) $(DESTDIR)/usr/share/arco/emacs
+	install -vd $(OLDBASE)
+#	ln -s $(BASE) $(DESTDIR)/usr/share/arco/emacs
 
 	install -v -m 755 bin/* $(BASE)/
 
@@ -37,17 +38,23 @@ install:
 	install -vm 444 config/template.el $(BASE)/
 	install -vm 444 modules/*.el $(BASE)/
 
+	for i in $$(find config -name "*.cfg.el" -exec basename {} \;); do \
+	    echo  "(message \"Deprecation warning: 'emacs-pills' is now at /usr/share/emacs-pills. Undate your .emacs\")\n(load \"/usr/share/emacs-pills/$${i}c\")" > $(OLDBASE)/$$i; \
+	done
+
+#	for i in $$(find config -name "*.cfg.el" -exec basename {} \;); do \
+#	    echo  "(message \"Deprecation warning: 'emacs-pills' is now at /usr/share/emacs-pills. Undate your .emacs\")\n(add-to-ordered-list 'load-path \"/usr/share/emacs-pills\")\n(load \"$$i\")" > $(OLDBASE)/$$i; \
+#	done
+
+
 	install -vm 444 config/schemas.xml $(BASE)/
-	@$(WGET) $(DOCBOOK)/docbook.rnc  -O $(BASE)/docbook.rnc
-	@$(WGET) $(DOCBOOK)/dbnotnx.rnc  -O $(BASE)/dbnotnx.rnc
-	@$(WGET) $(DOCBOOK)/dbpoolx.rnc  -O $(BASE)/dbpoolx.rnc
-	@$(WGET) $(DOCBOOK)/htmltblx.rnc -O $(BASE)/htmltblx.rnc
-	@$(WGET) $(DOCBOOK)/calstblx.rnc -O $(BASE)/calstblx.rnc
-	@$(WGET) $(DOCBOOK)/dbhierx.rnc  -O $(BASE)/dbhierx.rnc
+# 	@$(WGET) $(DOCBOOK)/docbook.rnc  -O $(BASE)/docbook.rnc
+# 	@$(WGET) $(DOCBOOK)/dbnotnx.rnc  -O $(BASE)/dbnotnx.rnc
+# 	@$(WGET) $(DOCBOOK)/dbpoolx.rnc  -O $(BASE)/dbpoolx.rnc
+# 	@$(WGET) $(DOCBOOK)/htmltblx.rnc -O $(BASE)/htmltblx.rnc
+# 	@$(WGET) $(DOCBOOK)/calstblx.rnc -O $(BASE)/calstblx.rnc
+#  	@$(WGET) $(DOCBOOK)/dbhierx.rnc  -O $(BASE)/dbhierx.rnc
 
 	install -vd $(BASE)/template
 	install -vm 444 template/* $(BASE)/template/
 
-
-gen-doc:
-	$(MAKE) -C config
