@@ -46,7 +46,9 @@
 (defun modeline-set-color (color)
   "Colors the modeline"
   (interactive)
-  (set-face-background 'modeline color))
+  (ignore-errors (set-face-background 'mode-line color))
+  (ignore-errors (set-face-background 'modeline color))  ; < 24.3.1
+  )
 
 (defun modeline-cancel-timer ()
   (let ((m modeline-timer))
@@ -118,7 +120,7 @@
      (progn
        (set-buffer compilation-last-buffer)
 	   (modeline-cancel-timer)
-	   (set-face-background 'modeline "LightBlue")
+	   (modeline-set-color "LightBlue")
 	   (recompile)
 	   )
    (call-interactively 'compile)))
