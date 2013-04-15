@@ -49,8 +49,8 @@
 (defun modeline-set-color (color)
   "Colors the modeline"
   (interactive)
-  (ignore-errors (set-face-background 'modeline color))
   (ignore-errors (set-face-background 'mode-line color))
+  (ignore-errors (set-face-background 'modeline color))  ; < 24.3.1
   )
 
 (defun modeline-cancel-timer ()
