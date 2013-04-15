@@ -20,7 +20,6 @@ clean:
 install:
 	install -vd $(BASE)
 	install -vd $(OLDBASE)
-#	ln -s $(BASE) $(DESTDIR)/usr/share/arco/emacs
 
 	install -v -m 755 bin/* $(BASE)/
 
@@ -57,4 +56,3 @@ install:
 
 	install -vd $(BASE)/template
 	install -vm 444 template/* $(BASE)/template/
-
