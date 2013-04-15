@@ -23,7 +23,7 @@
 ;|
 ;| - F5 compile (using last given compile command)
 ;| - Super-F5 asks for a new compile command
-;| - C-F5 opens compilation buffer
+;| - C-F5 opens the compilation buffer
 ;|
 ;| (new in version 0.20130327)
 
@@ -42,11 +42,16 @@
 (defvar modeline-timer)
 (setq modeline-timer nil)
 
+(defvar modeline-timeout)
+(setq modeline-timeout "2 sec")
+
 ; http://lazywithclass.posterous.com/emacs-functions-to-ease-tdd
 (defun modeline-set-color (color)
   "Colors the modeline"
   (interactive)
-  (set-face-background 'modeline color))
+  (ignore-errors (set-face-background 'modeline color))
+  (ignore-errors (set-face-background 'mode-line color))
+  )
 
 (defun modeline-cancel-timer ()
   (let ((m modeline-timer))
@@ -57,7 +62,7 @@
 (defun modeline-delayed-clean ()
   (modeline-cancel-timer)
   (setq modeline-timer
-		(run-at-time "2 sec" nil 'modeline-set-color nil)))
+		(run-at-time modeline-timeout nil 'modeline-set-color nil)))
 
 (defun open-compilation-buffer()
     (interactive)
@@ -89,19 +94,8 @@
 ;
 (setq compilation-exit-message-function 'compilation-exit-hook)
 
-
-; ;; Bury the compilation buffer when compilation is finished and successful.
-; (add-to-list 'compilation-finish-functions
-;   (lambda (buffer msg)
-;     (when (bury-buffer buffer)
-;       (replace-buffer-in-windows buffer))))
-
-;(defun hide-compilation-buffer
-;  (defadvice compile (around compile/save-window-excursion first () activate)
-;    (save-window-excursion ad-do-it))
-;  )
-
-; (hide-compilation-buffer)
+(defadvice compile (around compile/save-window-excursion first () activate)
+    (save-window-excursion ad-do-it))
 
 (defadvice recompile (around compile/save-window-excursion first () activate)
    (save-window-excursion ad-do-it))
@@ -109,16 +103,18 @@
 (setq compilation-last-buffer nil)
 (defun compile-again ()
    "Run the same compile as the last time.
-
-      If there was no last time, or there is a prefix argument, this acts like
+    If there was no last time, or there is a prefix argument, this acts like
       M-x compile."
  (interactive)
+
+ (setq compilation-process-setup-function
+       (lambda() (modeline-set-color "LightBlue")))
+
  (save-some-buffers 1)
  (if compilation-last-buffer
      (progn
        (set-buffer compilation-last-buffer)
 	   (modeline-cancel-timer)
-	   (set-face-background 'modeline "LightBlue")
 	   (recompile)
 	   )
    (call-interactively 'compile)))

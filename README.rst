@@ -26,6 +26,7 @@ out undesired pills::
   (load "compile.cfg")
   (load "docbook.cfg")
   (load "epy-nose.cfg")
+  (load "fill-column-indicator.cfg")
   (load "flymake.cfg")
   (load "flyspell.cfg")
   (load "global-zoom.cfg")
@@ -103,7 +104,7 @@ Keystrokes:
 
 - F5 compile (using last given compile command)
 - Super-F5 asks for a new compile command
-- C-F5 opens compilation buffer
+- C-F5 opens the compilation buffer
 
 (new in version 0.20130327)
 
