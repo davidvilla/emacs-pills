@@ -1,5 +1,11 @@
 emacs-pills (0.20130415-1) unstable; urgency=low
 
+  * New release
+
+ -- David Villa Alises <David.Villa@gmail.com>  Mon, 15 Apr 2013 21:07:55 +0200
+
+emacs-pills (0.20130415-1) unstable; urgency=low
+
   * Moved to /usr/share/emacs-pills. Redirection from
     /usr/share/arco/emacs (with warning) was added.
 
