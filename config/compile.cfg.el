@@ -115,12 +115,16 @@
       If there was no last time, or there is a prefix argument, this acts like
       M-x compile."
  (interactive)
+
+ (setq compilation-process-setup-function
+       (lambda() (modeline-set-color "LightBlue")))
+
  (save-some-buffers 1)
  (if compilation-last-buffer
      (progn
        (set-buffer compilation-last-buffer)
 	   (modeline-cancel-timer)
-	   (modeline-set-color "LightBlue")
+;	   (modeline-set-color "LightBlue")
 	   (recompile)
 	   )
    (call-interactively 'compile)))
