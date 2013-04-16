@@ -1,12 +1,10 @@
 usr/share/emacs-pills/compile-bookmarks.el
-usr/share/emacs-pills/fill-column-indicator.el
 usr/share/emacs-pills/auto-complete.cfg.elc
 usr/share/emacs-pills/auto-create-dirs.cfg.elc
 usr/share/emacs-pills/auto-insert.cfg.elc
 usr/share/emacs-pills/compile-bookmarks.cfg.elc
 usr/share/emacs-pills/compile.cfg.elc
 usr/share/emacs-pills/docbook.cfg.elc
-usr/share/emacs-pills/fill-column-indicator.cfg.elc
 usr/share/emacs-pills/flymake.cfg.elc
 usr/share/emacs-pills/flyspell.cfg.elc
 usr/share/emacs-pills/global-zoom.cfg.elc
