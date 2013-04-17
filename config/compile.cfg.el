@@ -32,6 +32,7 @@
 ; - http://comments.gmane.org/gmane.emacs.devel/156498
 ; - from http://emacswiki.org/emacs/CompileCommand (Xu Yuan)
 ; - http://emacswiki.org/emacs/CompileCommand (Recompiling)
+; - http://rtime.felk.cvut.cz/~sojka/blog/compile-on-save/
 
 (setq compilation-scroll-output 'first-error)
 
@@ -49,8 +50,13 @@
 (defun modeline-set-color (color)
   "Colors the modeline"
   (interactive)
-  (ignore-errors (set-face-background 'mode-line color))
-  (ignore-errors (set-face-background 'modeline color))  ; < 24.3.1
+;  (ignore-errors (set-face-background 'mode-line color))
+;  (ignore-errors (set-face-background 'modeline color))  ; < 24.3.1
+
+  (if (and (>= emacs-major-version 24) (>= emacs-minor-version 3))
+    (set-face-background 'mode-line color)
+    (set-face-background 'modeline color)
+    )
   )
 
 (defun modeline-cancel-timer ()
@@ -100,24 +106,38 @@
 (defadvice recompile (around compile/save-window-excursion first () activate)
    (save-window-excursion ad-do-it))
 
+
+(defun save-and-compile-again ()
+  (interactive)
+  (save-some-buffers 1)
+  (compile-again)
+  )
+
+(defun recompile-if-not-in-progress ()
+  (let ((buffer (compilation-find-buffer)))
+    (unless (get-buffer-process buffer)
+      (recompile)))
+  )
+
 (setq compilation-last-buffer nil)
 (defun compile-again ()
    "Run the same compile as the last time.
     If there was no last time, or there is a prefix argument, this acts like
       M-x compile."
- (interactive)
+   (interactive)
 
- (setq compilation-process-setup-function
-       (lambda() (modeline-set-color "LightBlue")))
+   (setq compilation-process-setup-function
+	 (lambda() (modeline-set-color "LightBlue")))
 
- (save-some-buffers 1)
- (if compilation-last-buffer
-     (progn
-       (set-buffer compilation-last-buffer)
-	   (modeline-cancel-timer)
-	   (recompile)
-	   )
-   (call-interactively 'compile)))
+   (if compilation-last-buffer
+       (progn
+	 (set-buffer compilation-last-buffer)
+	 (modeline-cancel-timer)
+	 (recompile-if-not-in-progress)
+	 )
+     (call-interactively 'compile)
+     )
+   )
 
 (defun ask-new-compile-command ()
   (interactive)
@@ -125,7 +145,21 @@
   (compile-again)
   )
 
-
-(global-set-key (kbd "<f5>")  'compile-again)
+(global-set-key (kbd "<f5>")  'save-and-compile-again)
 (global-set-key (kbd "s-<f5>") 'ask-new-compile-command)
 (global-set-key (kbd "C-<f5>") 'open-compilation-buffer)
+
+
+(define-minor-mode compile-on-save-mode
+  "Minor mode to automatically compile whenever the current buffer is
+  saved. When there is ongoing compilation, nothing happens."
+  :lighter " CoS"
+  (if compile-on-save-mode
+      (progn  (make-local-variable 'after-save-hook)
+	      (add-hook 'after-save-hook 'compile-on-save-start nil t))
+    (kill-local-variable 'after-save-hook)))
+
+(defun compile-on-save-start()
+  (interactive)
+  (message "Compiling after saving...")
+  (compile-again))

@@ -26,7 +26,6 @@ out undesired pills::
   (load "compile.cfg")
   (load "docbook.cfg")
   (load "epy-nose.cfg")
-  (load "fill-column-indicator.cfg")
   (load "flymake.cfg")
   (load "flyspell.cfg")
   (load "global-zoom.cfg")
@@ -127,10 +126,6 @@ nose python test runner bindings:
 - C-cp.  Run current test (run pdb on fail)
 
 (new in version 0.20130327)
-
-`fill-column-indicator.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/fill-column-indicator.cfg.el>`_
-=======================================================================================================================
-
 
 `flymake.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/flymake.cfg.el>`_
 ===========================================================================================

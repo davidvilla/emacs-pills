@@ -6,7 +6,6 @@
 (load "compile.cfg")
 (load "docbook.cfg")
 (load "epy-nose.cfg")
-(load "fill-column-indicator.cfg")
 (load "flymake.cfg")
 (load "flyspell.cfg")
 (load "global-zoom.cfg")
