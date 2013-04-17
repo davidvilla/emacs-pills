@@ -59,7 +59,7 @@ comment("// Green modeline means SUCCESS")
 close_compilation()
 
 # error
-comment("// Lets to produce an C error, and recompile (F5)")
+comment("// Lets to produce an error, and recompile (F5)")
 k('<Up><Up><Up><Up>')
 k('wrong<Tab>')
 k('<F5>')
