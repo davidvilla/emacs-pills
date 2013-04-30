@@ -73,8 +73,8 @@
 (defun open-compilation-buffer()
     (interactive)
     (display-buffer "*compilation*")
-	(modeline-delayed-clean)
-	)
+    (modeline-delayed-clean)
+    )
 
 (defun compilation-exit-hook (status code msg)
   ;; If M-x compile exists with a 0
@@ -94,7 +94,7 @@
 	  (open-compilation-buffer)))
 
   (setq current-frame (car (car (cdr (current-frame-configuration)))))
-  (select-frame-set-input-focus current-frame)
+;  (select-frame-set-input-focus current-frame)
   ;; Always return the anticipated result of compilation-exit-message-function
   (cons msg code))
 ;
@@ -119,6 +119,20 @@
       (recompile)))
   )
 
+(defun interrupt-compilation ()
+    (ignore-errors
+    (process-kill-without-query
+      (get-buffer-process
+        (get-buffer "*compilation*"))))
+    )
+
+(defun interrupt-and-recompile ()
+  "Interrupt old compilation, if any, and recompile."
+  (interactive)
+   (interrupt-compilation)
+   (recompile)
+)
+
 (setq compilation-last-buffer nil)
 (defun compile-again ()
    "Run the same compile as the last time.
@@ -134,6 +148,7 @@
 	 (set-buffer compilation-last-buffer)
 	 (modeline-cancel-timer)
 	 (recompile-if-not-in-progress)
+;	 (interrupt-and-recompile)
 	 )
      (call-interactively 'compile)
      )
@@ -156,10 +171,10 @@
   :lighter " CoS"
   (if compile-on-save-mode
       (progn  (make-local-variable 'after-save-hook)
-	      (add-hook 'after-save-hook 'compile-on-save-start nil t))
+	      (add-hook 'after-save-hook 'activate-compile-on-save nil t))
     (kill-local-variable 'after-save-hook)))
 
-(defun compile-on-save-start()
+(defun activate-compile-on-save()
   (interactive)
   (message "Compiling after saving...")
   (compile-again))
