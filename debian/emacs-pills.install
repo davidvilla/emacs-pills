@@ -53,5 +53,4 @@ usr/share/arco/emacs/toggle-split.cfg.el
 usr/share/arco/emacs/uniquify.cfg.el
 usr/share/arco/emacs/window-move.cfg.el
 usr/share/arco/emacs/zoom.cfg.el
-usr/share/emacs/site-lisp/yasnippet/snippets/text-mode/
-usr/share/emacs/site-lisp/yasnippet/snippets/text-mode/python-mode/
+usr/share/emacs/site-lisp/yasnippet/snippets

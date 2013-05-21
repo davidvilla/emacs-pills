@@ -3,7 +3,7 @@
 #key: unit
 #expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
 # --
-# -*- coding:utf-8; tab-width:4; mode:python -*-
+# -*- mode:python; coding:utf-8; tab-width:4 -*-
 
 from unittest import TestCase
 

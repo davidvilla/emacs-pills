@@ -1,4 +1,4 @@
-#contributor : <David.Villa@uclm.es>
+#contributor : <David.Villa@gmail.com>
 #name : (date based version)
 # --
 `(format-time-string "0.%Y%m%d")`

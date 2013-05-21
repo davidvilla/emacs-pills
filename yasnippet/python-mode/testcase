@@ -1,5 +1,6 @@
 #contributor : <David.Villa@uclm.es>
 #name: TestCase
+#expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
 # --
 class Test${0}(TestCase):
     def setUp(self):
