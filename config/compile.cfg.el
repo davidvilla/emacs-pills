@@ -98,7 +98,7 @@
   ;; Always return the anticipated result of compilation-exit-message-function
   (cons msg code))
 ;
-(setq compilation-exit-message-function 'compilation-exit-hook)
+;(setq compilation-exit-message-function 'compilation-exit-hook)
 
 (defadvice compile (around compile/save-window-excursion first () activate)
     (save-window-excursion ad-do-it))
@@ -120,17 +120,19 @@
   )
 
 (defun interrupt-compilation ()
-    (ignore-errors
+  (setq compilation-exit-message-function 'nil)
+  (modeline-set-color "DeepSkyBlue")
+  (ignore-errors
     (process-kill-without-query
-      (get-buffer-process
-        (get-buffer "*compilation*"))))
-    )
+     (get-buffer-process
+      (get-buffer "*compilation*"))))
+  )
 
 (defun interrupt-and-recompile ()
   "Interrupt old compilation, if any, and recompile."
   (interactive)
-   (interrupt-compilation)
-   (recompile)
+  (interrupt-compilation)
+  (recompile)
 )
 
 (setq compilation-last-buffer nil)
@@ -141,14 +143,16 @@
    (interactive)
 
    (setq compilation-process-setup-function
-	 (lambda() (modeline-set-color "LightBlue")))
+	 (lambda() (progn (modeline-cancel-timer)
+			  (setq compilation-exit-message-function 'compilation-exit-hook)
+			  (modeline-set-color "LightBlue"))))
 
    (if compilation-last-buffer
        (progn
 	 (set-buffer compilation-last-buffer)
 	 (modeline-cancel-timer)
-	 (recompile-if-not-in-progress)
-;	 (interrupt-and-recompile)
+;	 (recompile-if-not-in-progress)
+	 (interrupt-and-recompile)
 	 )
      (call-interactively 'compile)
      )
