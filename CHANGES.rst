@@ -1,3 +1,9 @@
+0.20130517
+==========
+
+* recompile while a compilation is running interrupt it and compile-again. It mark it setting
+  modeline to DeepBlue.
+
 0.20130327
 ==========
 
@@ -33,4 +39,5 @@
 ..  mode: rst
 ..  mode: flyspell
 ..  ispell-local-dictionary: "american"
+.. fill-column: 90
 .. End:

@@ -5,7 +5,7 @@ DESTDIR?=~
 
 BASE=$(DESTDIR)/usr/share/emacs-pills
 OLDBASE=$(DESTDIR)/usr/share/arco/emacs
-YASNIPPET=$(DESTDIR)/usr/share/emacs/site-lisp/yasnippet/snippets/text-mode
+YASNIPPET=$(DESTDIR)/usr/share/emacs/site-lisp/yasnippet/snippets
 DOCBOOK=http://www.oasis-open.org/docbook/rng/4.5
 
 WGET=wget --no-check-certificate -nv
@@ -24,13 +24,16 @@ install:
 	install -v -m 755 bin/* $(BASE)/
 
 	install -vd $(YASNIPPET)
-	install -v -m 444 yasnippet/text-mode/*.yasnippet $(YASNIPPET)/
+	install -vd $(YASNIPPET)/text-mode
+	install -v -m 444 yasnippet/text-mode/* $(YASNIPPET)/text-mode/
+	install -vd $(YASNIPPET)/fundamental-mode
+	install -v -m 444 yasnippet/fundamental-mode/.yas-parents $(YASNIPPET)/fundamental-mode/
 	install -vd $(YASNIPPET)/python-mode
-	install -v -m 444 yasnippet/text-mode/python-mode/*.yasnippet $(YASNIPPET)/python-mode/
+	install -v -m 444 yasnippet/python-mode/* $(YASNIPPET)/python-mode/
 	install -vd $(YASNIPPET)/ruby-mode
-	install -v -m 444 yasnippet/text-mode/ruby-mode/*.yasnippet $(YASNIPPET)/ruby-mode/
+	install -v -m 444 yasnippet/ruby-mode/* $(YASNIPPET)/ruby-mode/
 	install -vd $(YASNIPPET)/latex-mode
-	install -v -m 444 yasnippet/text-mode/latex-mode/*.yasnippet $(YASNIPPET)/latex-mode/
+	install -v -m 444 yasnippet/latex-mode/* $(YASNIPPET)/latex-mode/
 
 	install -vd $(BASE)
 	install -vm 444 config/*.cfg.elc $(BASE)/
