@@ -12,6 +12,7 @@
 (load "highlight-changes.cfg")
 (load "hl.cfg")
 (load "latex.cfg")
+(load "markdown.cfg")
 (load "maximize.cfg")
 (load "minimal.cfg")
 (load "move-line-or-region.cfg")

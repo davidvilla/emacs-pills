@@ -189,6 +189,11 @@ Provides a live checker for flymake (disabled by default). To enable it::
 
   M-x flymake-mode
 
+`markdown.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/markdown.cfg.el>`_
+=============================================================================================
+
+use markdown-mode for .md files
+
 `maximize.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/maximize.cfg.el>`_
 =============================================================================================
 

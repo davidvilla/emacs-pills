@@ -10,7 +10,7 @@
 (setq TeX-auto-save t) ; Enable parse on save.
 
 (defvar TeX-auto-local)
-(setq TeX-auto-local "")
+(setq TeX-auto-local "/tmp/auctex-auto/") ; where to save parsing
 
 (defvar TeX-parse-self)
 (setq TeX-parse-self t) ; Enable parse on load.

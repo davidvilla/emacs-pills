@@ -11,6 +11,7 @@ usr/share/emacs-pills/global-zoom.cfg.elc
 usr/share/emacs-pills/highlight-changes.cfg.elc
 usr/share/emacs-pills/hl.cfg.elc
 usr/share/emacs-pills/latex.cfg.elc
+usr/share/emacs-pills/markdown.cfg.elc
 usr/share/emacs-pills/maximize.cfg.elc
 usr/share/emacs-pills/minimal.cfg.elc
 usr/share/emacs-pills/move-line-or-region.cfg.elc
