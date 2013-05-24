@@ -32,6 +32,7 @@ out undesired pills::
   (load "highlight-changes.cfg")
   (load "hl.cfg")
   (load "latex.cfg")
+  (load "markdown.cfg")
   (load "maximize.cfg")
   (load "minimal.cfg")
   (load "move-line-or-region.cfg")
@@ -192,7 +193,7 @@ Provides a live checker for flymake (disabled by default). To enable it::
 `markdown.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/markdown.cfg.el>`_
 =============================================================================================
 
-use markdown-mode for .md files
+enable markdown-mode for .md files
 
 `maximize.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/maximize.cfg.el>`_
 =============================================================================================

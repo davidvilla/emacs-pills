@@ -50,9 +50,6 @@
 (defun modeline-set-color (color)
   "Colors the modeline"
   (interactive)
-;  (ignore-errors (set-face-background 'mode-line color))
-;  (ignore-errors (set-face-background 'modeline color))  ; < 24.3.1
-
   (if (and (>= emacs-major-version 24) (>= emacs-minor-version 3))
     (set-face-background 'mode-line color)
     (set-face-background 'modeline color)
@@ -91,14 +88,18 @@
       )
     (progn
 	  (modeline-set-color "OrangeRed")
-	  (open-compilation-buffer)))
+	  (if compile-on-save-mode
+	      (progn
+		(message "- not compilation buffer show in CoS")
+		(modeline-delayed-clean))
+	    (progn
+	      (message "- openning compilation buffer")
+	      (open-compilation-buffer)))))
 
   (setq current-frame (car (car (cdr (current-frame-configuration)))))
 ;  (select-frame-set-input-focus current-frame)
   ;; Always return the anticipated result of compilation-exit-message-function
   (cons msg code))
-;
-;(setq compilation-exit-message-function 'compilation-exit-hook)
 
 (defadvice compile (around compile/save-window-excursion first () activate)
     (save-window-excursion ad-do-it))
@@ -121,12 +122,17 @@
 
 (defun interrupt-compilation ()
   (setq compilation-exit-message-function 'nil)
-  (modeline-set-color "DeepSkyBlue")
   (ignore-errors
-    (process-kill-without-query
-     (get-buffer-process
-      (get-buffer "*compilation*"))))
+    (progn (process-kill-without-query
+	    (get-buffer-process (get-buffer "*compilation*")))
+	   (modeline-set-color "DeepSkyBlue")))
+
+;  (condition-case nil
+;      (process-kill-without-query
+;       (get-buffer-process (get-buffer "*compilation*")))
+;    (error (modeline-set-color "DeepSkyBlue")))
   )
+
 
 (defun interrupt-and-recompile ()
   "Interrupt old compilation, if any, and recompile."
@@ -149,9 +155,10 @@
 
    (if compilation-last-buffer
        (progn
-	 (set-buffer compilation-last-buffer)
+;	 (condition-case nil
+;	     (set-buffer compilation-last-buffer)
+;	   (error 'ask-new-compile-command))
 	 (modeline-cancel-timer)
-;	 (recompile-if-not-in-progress)
 	 (interrupt-and-recompile)
 	 )
      (call-interactively 'compile)
@@ -173,6 +180,7 @@
   "Minor mode to automatically compile whenever the current buffer is
   saved. When there is ongoing compilation, nothing happens."
   :lighter " CoS"
+  :
   (if compile-on-save-mode
       (progn  (make-local-variable 'after-save-hook)
 	      (add-hook 'after-save-hook 'activate-compile-on-save nil t))
