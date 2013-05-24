@@ -128,6 +128,10 @@ nose python test runner bindings:
 
 (new in version 0.20130327)
 
+`fill-column-indicator.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/fill-column-indicator.cfg.el>`_
+=======================================================================================================================
+
+
 `flymake.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/flymake.cfg.el>`_
 ===========================================================================================
 

@@ -46,6 +46,8 @@
 (defvar modeline-timeout)
 (setq modeline-timeout "2 sec")
 
+(defvar open-compilation-buffer-flag)
+
 ; http://lazywithclass.posterous.com/emacs-functions-to-ease-tdd
 (defun modeline-set-color (color)
   "Colors the modeline"
@@ -67,15 +69,9 @@
   (setq modeline-timer
 		(run-at-time modeline-timeout nil 'modeline-set-color nil)))
 
-(defun open-compilation-buffer()
-    (interactive)
-    (display-buffer "*compilation*")
-    (modeline-delayed-clean)
-    )
-
 (defun compilation-exit-hook (status code msg)
   ;; If M-x compile exists with a 0
-  (defvar current-frame)
+;  (defvar current-frame)
   (if (and (eq status 'exit) (zerop code))
     (progn
       (if (string-match "warning:" (buffer-string))
@@ -88,15 +84,12 @@
       )
     (progn
 	  (modeline-set-color "OrangeRed")
-	  (if compile-on-save-mode
-	      (progn
-		(message "- not compilation buffer show in CoS")
-		(modeline-delayed-clean))
-	    (progn
-	      (message "- openning compilation buffer")
-	      (open-compilation-buffer)))))
+	  (if open-compilation-buffer-flag
+	      (open-compilation-buffer)
+	      (modeline-delayed-clean)
+	    )))
 
-  (setq current-frame (car (car (cdr (current-frame-configuration)))))
+;  (setq current-frame (car (car (cdr (current-frame-configuration)))))
 ;  (select-frame-set-input-focus current-frame)
   ;; Always return the anticipated result of compilation-exit-message-function
   (cons msg code))
@@ -106,13 +99,6 @@
 
 (defadvice recompile (around compile/save-window-excursion first () activate)
    (save-window-excursion ad-do-it))
-
-
-(defun save-and-compile-again ()
-  (interactive)
-  (save-some-buffers 1)
-  (compile-again)
-  )
 
 (defun recompile-if-not-in-progress ()
   (let ((buffer (compilation-find-buffer)))
@@ -165,28 +151,43 @@
      )
    )
 
-(defun ask-new-compile-command ()
-  (interactive)
-  (setq compilation-last-buffer nil)
-  (compile-again)
-  )
-
 (global-set-key (kbd "<f5>")  'save-and-compile-again)
 (global-set-key (kbd "s-<f5>") 'ask-new-compile-command)
 (global-set-key (kbd "C-<f5>") 'open-compilation-buffer)
 
+(defun save-and-compile-again ()
+  (interactive)
+  (save-some-buffers 1)
+  (setq open-compilation-buffer-flag t)
+  (compile-again)
+  )
+
+(defun ask-new-compile-command ()
+  (interactive)
+  (setq compilation-last-buffer nil)
+  (save-and-compile-again)
+  )
+
+(defun open-compilation-buffer()
+  (interactive)
+  (display-buffer "*compilation*")
+  (modeline-delayed-clean)
+  )
+
+
+;-- compile-on-save minor mode ---
 
 (define-minor-mode compile-on-save-mode
   "Minor mode to automatically compile whenever the current buffer is
   saved. When there is ongoing compilation, nothing happens."
   :lighter " CoS"
-  :
   (if compile-on-save-mode
-      (progn  (make-local-variable 'after-save-hook)
-	      (add-hook 'after-save-hook 'activate-compile-on-save nil t))
+      (progn (make-local-variable 'after-save-hook)
+	     (add-hook 'after-save-hook 'activate-compile-on-save nil t))
     (kill-local-variable 'after-save-hook)))
 
 (defun activate-compile-on-save()
   (interactive)
   (message "Compiling after saving...")
+  (setq open-compilation-buffer-flag nil)
   (compile-again))
