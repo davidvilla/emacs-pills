@@ -19,6 +19,7 @@
 (load "paren-autoclose.cfg")
 (load "psgml.cfg")
 (load "python.cfg")
+(load "revert.cfg")
 (load "rst.cfg")
 (load "slice.cfg")
 (load "speedbar.cfg")

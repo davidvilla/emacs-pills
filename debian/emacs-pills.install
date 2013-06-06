@@ -18,6 +18,7 @@ usr/share/emacs-pills/move-line-or-region.cfg.elc
 usr/share/emacs-pills/paren-autoclose.cfg.elc
 usr/share/emacs-pills/psgml.cfg.elc
 usr/share/emacs-pills/rst.cfg.elc
+usr/share/emacs-pills/revert.cfg.elc
 usr/share/emacs-pills/slice.cfg.elc
 usr/share/emacs-pills/speedbar.cfg.elc
 usr/share/emacs-pills/strip.cfg.elc
