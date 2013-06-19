@@ -123,6 +123,8 @@ elisp utitlity functions
 
 - eval-and-replace
 
+(new in version 0.20130619)
+
 `epy-nose.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/epy-nose.cfg.el>`_
 =============================================================================================
 
@@ -303,6 +305,8 @@ toggle between CamelCase and underscore_lowercase identifiers
 Keystrokes:
 
 - C-c C toggles identifer style
+
+(new in version 0.20130619)
 
 `toggle-split.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/toggle-split.cfg.el>`_
 =====================================================================================================

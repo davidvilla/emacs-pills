@@ -1,6 +1,9 @@
 ;| elisp utitlity functions
 ;|
 ;| - eval-and-replace
+;|
+;| (new in version 0.20130619)
+
 
 ; http://irreal.org/blog/?p=297
 (defun eval-and-replace (value)

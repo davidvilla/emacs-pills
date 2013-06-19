@@ -3,6 +3,9 @@
 ;| Keystrokes:
 ;|
 ;| - C-c C toggles identifer style
+;|
+;| (new in version 0.20130619)
+
 
 ; https://www.bunkus.org/blog/2009/12/switching-identifier-naming-style-between-camel-case-and-c-style-in-emacs/
 (defun mo-toggle-identifier-naming-style ()
