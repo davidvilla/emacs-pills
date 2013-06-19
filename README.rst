@@ -244,6 +244,11 @@ opening one.
 flymake configuration for python-mode (enabled by default).
 Set pyflakes as Python syntax checker. Run with C-c C-v
 
+`revert.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/revert.cfg.el>`_
+=========================================================================================
+
+revert-buffer customization: keep undo history
+
 `rst.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/rst.cfg.el>`_
 ===================================================================================
 
