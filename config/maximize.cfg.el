@@ -4,8 +4,8 @@
 ;|
 ;| Keystrokes:
 ;|
-;| - F11: toogles fullscreen.
-;| - C-F11: toogles vertical maximization.
+;| - F11: toggles fullscreen.
+;| - C-F11: toggles vertical maximization.
 
 (defvar old-fullscreen)
 
