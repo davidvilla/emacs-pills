@@ -40,6 +40,7 @@ out undesired pills::
   (load "paren-autoclose.cfg")
   (load "psgml.cfg")
   (load "python.cfg")
+  (load "revert.cfg")
   (load "rst.cfg")
   (load "slice.cfg")
   (load "speedbar.cfg")
@@ -113,6 +114,13 @@ Keystrokes:
 ===========================================================================================
 
 nxml-mode configuration for DocBook 4.5.
+
+`elisp.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/elisp.cfg.el>`_
+=======================================================================================
+
+elisp utitlity functions
+
+- eval-and-replace
 
 `epy-nose.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/epy-nose.cfg.el>`_
 =============================================================================================

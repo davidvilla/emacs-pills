@@ -5,6 +5,7 @@ usr/share/emacs-pills/auto-insert.cfg.elc
 usr/share/emacs-pills/compile-bookmarks.cfg.elc
 usr/share/emacs-pills/compile.cfg.elc
 usr/share/emacs-pills/docbook.cfg.elc
+usr/share/emacs-pills/elisp.cfg.elc
 usr/share/emacs-pills/flymake.cfg.elc
 usr/share/emacs-pills/flyspell.cfg.elc
 usr/share/emacs-pills/global-zoom.cfg.elc

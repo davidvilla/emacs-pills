@@ -5,6 +5,7 @@
 (load "compile-bookmarks.cfg")
 (load "compile.cfg")
 (load "docbook.cfg")
+(load "elisp.cfg")
 (load "epy-nose.cfg")
 (load "fill-column-indicator.cfg")
 (load "flymake.cfg")
