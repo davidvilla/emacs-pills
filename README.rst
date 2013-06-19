@@ -214,8 +214,8 @@ Maximize the Emacs X window.
 
 Keystrokes:
 
-- F11: toogles fullscreen.
-- C-F11: toogles vertical maximization.
+- F11: toggles fullscreen.
+- C-F11: toggles vertical maximization.
 
 `minimal.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/minimal.cfg.el>`_
 ===========================================================================================
