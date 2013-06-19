@@ -25,6 +25,7 @@ out undesired pills::
   (load "compile-bookmarks.cfg")
   (load "compile.cfg")
   (load "docbook.cfg")
+  (load "elisp.cfg")
   (load "epy-nose.cfg")
   (load "fill-column-indicator.cfg")
   (load "flymake.cfg")
@@ -136,10 +137,6 @@ nose python test runner bindings:
 - C-cp.  Run current test (run pdb on fail)
 
 (new in version 0.20130327)
-
-`fill-column-indicator.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/fill-column-indicator.cfg.el>`_
-=======================================================================================================================
-
 
 `flymake.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/flymake.cfg.el>`_
 ===========================================================================================
@@ -297,6 +294,15 @@ Keystrokes:
 - M-<n> to change among the first 10 tabs
 - C-S-left and C-S-right to change among buffers in the same group.
 - C-S-up and C-S-down to change among groups.
+
+`toggle-id-style.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/toggle-id-style.cfg.el>`_
+===========================================================================================================
+
+toggle between CamelCase and underscore_lowercase identifiers
+
+Keystrokes:
+
+- C-c C toggles identifer style
 
 `toggle-split.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/toggle-split.cfg.el>`_
 =====================================================================================================

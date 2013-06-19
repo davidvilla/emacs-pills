@@ -25,6 +25,7 @@ usr/share/emacs-pills/speedbar.cfg.elc
 usr/share/emacs-pills/strip.cfg.elc
 usr/share/emacs-pills/tabbar.cfg.elc
 usr/share/emacs-pills/template/
+usr/share/emacs-pills/toggle-id-style.cfg.elc
 usr/share/emacs-pills/toggle-split.cfg.elc
 usr/share/emacs-pills/uniquify.cfg.elc
 usr/share/emacs-pills/window-move.cfg.elc
