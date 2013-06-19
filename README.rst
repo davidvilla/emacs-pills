@@ -27,7 +27,6 @@ out undesired pills::
   (load "docbook.cfg")
   (load "elisp.cfg")
   (load "epy-nose.cfg")
-  (load "fill-column-indicator.cfg")
   (load "flymake.cfg")
   (load "flyspell.cfg")
   (load "global-zoom.cfg")
@@ -47,6 +46,7 @@ out undesired pills::
   (load "speedbar.cfg")
   (load "strip.cfg")
   (load "tabbar.cfg")
+  (load "toggle-id-style.cfg")
   (load "toggle-split.cfg")
   (load "uniquify.cfg")
   (load "window-move.cfg")
@@ -90,8 +90,8 @@ See the screencast:
 
    |compile-screencast|_
 
-.. |compile-screencast| image:: http://i4.ytimg.com/vi/34B3mkPj01s/3.jpg?time=1365699591540
-.. _compile-screencast: http://youtu.be/34B3mkPj01s
+.. |compile-screencast| image:: http://i3.ytimg.com/vi/ZnWN7htqT48/2.jpg?time=1371658070649
+.. _compile-screencast: http://youtu.be/ZnWN7htqT48
 
 Features:
 
