@@ -2,6 +2,6 @@
 #name: #!/usr/bin/python
 #key: !py
 # --
-#!/usr/bin/python
+#!/usr/bin/env python
 # -*- mode:python; coding:utf-8; tab-width:4 -*-
 

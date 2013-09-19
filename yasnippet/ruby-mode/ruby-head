@@ -2,5 +2,5 @@
 #name: #!/usr/bin/ruby
 #key: !rb
 # --
-#!/usr/bin/ruby
+#!/usr/bin/env ruby
 # -*- mode:ruby; coding:utf-8; tab-width:4 -*-
