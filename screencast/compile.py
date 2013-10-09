@@ -35,7 +35,7 @@ recorder = SubProcess('/usr/bin/recordmydesktop --no-sound --full-shots -x 10 -y
 
 SubProcess('rm /tmp/hello.c').wait()
 emacs = SubProcess('/usr/bin/emacs --no-splash -q -l init.el -g 80x25')
-sleep(3)
+sleep(5)
 
 # new file: /tmp/hello.c
 k('<Alt_L>xerase-buffer<Return>y')
