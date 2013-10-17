@@ -1,7 +1,6 @@
 #contributor : <David.Villa@uclm.es>
 #name: #!/usr/bin/python
-#key: !py
+#key: !
 # --
 #!/usr/bin/env python
 # -*- mode:python; coding:utf-8; tab-width:4 -*-
-
