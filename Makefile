@@ -34,8 +34,8 @@ install:
 	install -v -m 444 yasnippet/ruby-mode/* $(YASNIPPET)/ruby-mode/
 	install -vd $(YASNIPPET)/latex-mode
 	install -v -m 444 yasnippet/latex-mode/* $(YASNIPPET)/latex-mode/
-	install -vd $(YASNIPPET)/xml-mode
-	install -v -m 444 yasnippet/xml-mode/* $(YASNIPPET)/xml-mode/
+#	install -vd $(YASNIPPET)/xml-mode
+#	install -v -m 444 yasnippet/xml-mode/* $(YASNIPPET)/xml-mode/
 	install -vd $(YASNIPPET)/makefile-mode
 	install -v -m 444 yasnippet/makefile-mode/* $(YASNIPPET)/makefile-mode/
 
