@@ -18,4 +18,13 @@
   (setq global-hl-line-mode nil))
 
 (global-hl-line-mode 1)
-(set-face-background 'hl-line "#dfd")
+;(if window-system
+;    (defface hl-line '((t(:background "#dfd"))) "Face to use for 'hl-line-face'." :group 'hl-line)
+;  (defface hl-line '((t(:weight bold))) "Face to use for 'hl-line-face'." :group 'hl-line)
+;)
+;(setq hl-line-face 'hl-line)
+
+(if window-system
+    (set-face-background 'hl-line "#dfd")
+ (setq hl-line-face '(t(:weight bold)))
+)
