@@ -95,11 +95,12 @@
   (cons msg code))
 
 (defadvice compile (around compile/save-window-excursion first () activate)
-    (save-window-excursion ad-do-it))
+  (save-window-excursion ad-do-it))
 
 (defadvice recompile (around compile/save-window-excursion first () activate)
-   (save-window-excursion ad-do-it))
+  (save-window-excursion ad-do-it))
 
+; FIXME: nobody calls this
 (defun recompile-if-not-in-progress ()
   (let ((buffer (compilation-find-buffer)))
     (unless (get-buffer-process buffer)
@@ -109,9 +110,16 @@
 (defun interrupt-compilation ()
   (setq compilation-exit-message-function 'nil)
   (ignore-errors
-    (progn (process-kill-without-query
-	    (get-buffer-process (get-buffer "*compilation*")))
-	   (modeline-set-color "DeepSkyBlue")))
+    (progn (delete-process "*compilation*")
+  	   (modeline-set-color "DeepSkyBlue")
+  	   (message "previous compilation aborted!")
+  	   (sit-for 1.5)
+  	   ))
+
+  ;; (ignore-errors
+  ;;   (progn (process-kill-without-query
+  ;; 	    (get-buffer-process (get-buffer "*compilation*")))
+  ;; 	   (modeline-set-color "DeepSkyBlue")))
 
 ;  (condition-case nil
 ;      (process-kill-without-query
