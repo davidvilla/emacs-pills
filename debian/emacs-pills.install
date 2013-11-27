@@ -1,4 +1,7 @@
 usr/share/emacs-pills/compile-bookmarks.el
+usr/share/emacs-pills/init.el
+usr/share/emacs-pills/projectile.cfg.el
+usr/share/emacs-pills/multiple-cursors.cfg.el
 usr/share/emacs-pills/auto-complete.cfg.elc
 usr/share/emacs-pills/auto-create-dirs.cfg.elc
 usr/share/emacs-pills/auto-insert.cfg.elc
@@ -16,6 +19,7 @@ usr/share/emacs-pills/markdown.cfg.elc
 usr/share/emacs-pills/maximize.cfg.elc
 usr/share/emacs-pills/minimal.cfg.elc
 usr/share/emacs-pills/move-line-or-region.cfg.elc
+usr/share/emacs-pills/package.cfg.elc
 usr/share/emacs-pills/paren-autoclose.cfg.elc
 usr/share/emacs-pills/psgml.cfg.elc
 usr/share/emacs-pills/rst.cfg.elc
@@ -23,6 +27,7 @@ usr/share/emacs-pills/revert.cfg.elc
 usr/share/emacs-pills/slice.cfg.elc
 usr/share/emacs-pills/speedbar.cfg.elc
 usr/share/emacs-pills/strip.cfg.elc
+usr/share/emacs-pills/shut-up.cfg.elc
 usr/share/emacs-pills/tabbar.cfg.elc
 usr/share/emacs-pills/template/
 usr/share/emacs-pills/toggle-id-style.cfg.elc

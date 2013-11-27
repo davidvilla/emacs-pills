@@ -1,7 +1,7 @@
 SOURCES=$(wildcard *.cfg.el)
 
 all: ../README.rst template.el
-	find . -name "*.cfg.el" | awk '{print "(byte-compile-file \"" $$1 "\")";}' > bytecompile.el
+	find . -name "*.cfg.el" | awk '{print "(byte-compile-file \"" $$1 "\")";}' | grep -v "multiple-cursors" | grep -v "projectile" > bytecompile.el
 	/usr/bin/emacs -L ../modules -batch -l bytecompile.el -kill
 
 %.html: %.rst $(SOURCES) gen-doc.py

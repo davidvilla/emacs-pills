@@ -37,11 +37,15 @@ out undesired pills::
   (load "maximize.cfg")
   (load "minimal.cfg")
   (load "move-line-or-region.cfg")
+  (load "multiple-cursors.cfg")
+  (load "package.cfg")
   (load "paren-autoclose.cfg")
+  (load "projectile.cfg")
   (load "psgml.cfg")
   (load "python.cfg")
   (load "revert.cfg")
   (load "rst.cfg")
+  (load "shut-up.cfg")
   (load "slice.cfg")
   (load "speedbar.cfg")
   (load "strip.cfg")
@@ -233,11 +237,31 @@ Keystrokes:
 - M-up:   move text up
 - M-down: move text down
 
+`multiple-cursors.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/multiple-cursors.cfg.el>`_
+=============================================================================================================
+
+keybindings for the multiple-cursor mode
+
+FIXME: specify keybindings
+
+https://github.com/magnars/multiple-cursors.el
+
+`package.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/package.cfg.el>`_
+===========================================================================================
+
+
 `paren-autoclose.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/paren-autoclose.cfg.el>`_
 ===========================================================================================================
 
 Automatic close for parentheses (and other pair stuff) when you write the
 opening one.
+
+`projectile.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/projectile.cfg.el>`_
+=================================================================================================
+
+Projectile mode config and customizations
+
+Reference: https://github.com/bbatsov/projectile
 
 `psgml.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/psgml.cfg.el>`_
 =======================================================================================
@@ -260,6 +284,11 @@ revert-buffer customization: keep undo history
 ===================================================================================
 
 Activate rst-mode for *.rst files
+
+`shut-up.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/shut-up.cfg.el>`_
+===========================================================================================
+
+Make emacs quieter
 
 `slice.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/slice.cfg.el>`_
 =======================================================================================
