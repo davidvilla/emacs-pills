@@ -43,6 +43,7 @@ install:
 	install -vm 444 config/*.cfg.elc $(BASE)/
 	install -vm 444 config/multiple-cursors.cfg.el $(BASE)/
 	install -vm 444 config/projectile.cfg.el $(BASE)/
+	install -vm 444 config/paren-autoclose.cfg.el $(BASE)/
 
 	install -vm 444 config/template.el $(BASE)/
 	install -vm 444 config/init.el $(BASE)/

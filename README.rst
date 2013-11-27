@@ -18,7 +18,7 @@ And run::
 Then, write down something like that in your ``~/.emacs`` and comment
 out undesired pills::
 
-  (add-to-list 'load-path "/usr/share/arco/emacs")
+  (load-file "/usr/share/emacs-pills/init.el")
   (load "auto-complete.cfg")
   (load "auto-create-dirs.cfg")
   (load "auto-insert.cfg")
@@ -30,7 +30,6 @@ out undesired pills::
   (load "flymake.cfg")
   (load "flyspell.cfg")
   (load "global-zoom.cfg")
-  (load "highlight-changes.cfg")
   (load "hl.cfg")
   (load "latex.cfg")
   (load "markdown.cfg")
@@ -243,6 +242,13 @@ See: https://github.com/magnars/multiple-cursors.el
 
 `package.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/package.cfg.el>`_
 ===========================================================================================
+
+
+`paren-autoclose.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/paren-autoclose.cfg.el>`_
+===========================================================================================================
+
+Automatic close for parentheses (and other pair stuff) when you write the
+opening one. Now using "autopair"
 
 
 `projectile.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/projectile.cfg.el>`_

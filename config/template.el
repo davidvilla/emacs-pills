@@ -1,4 +1,4 @@
-(add-to-list 'load-path "/usr/share/arco/emacs")
+(load-file "/usr/share/emacs-pills/init.el")
 (load "auto-complete.cfg")
 (load "auto-create-dirs.cfg")
 (load "auto-insert.cfg")
@@ -10,7 +10,6 @@
 (load "flymake.cfg")
 (load "flyspell.cfg")
 (load "global-zoom.cfg")
-(load "highlight-changes.cfg")
 (load "hl.cfg")
 (load "latex.cfg")
 (load "markdown.cfg")
