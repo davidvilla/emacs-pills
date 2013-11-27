@@ -22,4 +22,4 @@ template.el: $(SOURCES)
 clean:
 	$(RM) *.html *.elc *.1
 	$(RM) $(shell find . -name "*.elc")
-	$(RM) bytecompile.el template.el
+	$(RM) bytecompile.el

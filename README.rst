@@ -18,7 +18,7 @@ And run::
 Then, write down something like that in your ``~/.emacs`` and comment
 out undesired pills::
 
-  (load-file "/usr/share/emacs-pills/init.el")
+  (add-to-list 'load-path "/usr/share/arco/emacs")
   (load "auto-complete.cfg")
   (load "auto-create-dirs.cfg")
   (load "auto-insert.cfg")
@@ -30,6 +30,7 @@ out undesired pills::
   (load "flymake.cfg")
   (load "flyspell.cfg")
   (load "global-zoom.cfg")
+  (load "highlight-changes.cfg")
   (load "hl.cfg")
   (load "latex.cfg")
   (load "markdown.cfg")
@@ -38,6 +39,7 @@ out undesired pills::
   (load "move-line-or-region.cfg")
   (load "multiple-cursors.cfg")
   (load "package.cfg")
+  (load "paren-autoclose.cfg")
   (load "projectile.cfg")
   (load "psgml.cfg")
   (load "python.cfg")
