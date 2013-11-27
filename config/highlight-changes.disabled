@@ -2,6 +2,7 @@
 
 ; http://emacs-fu.blogspot.com/2009/05/tracking-changes.html
 
+;| :skip:
 ;| Activate ``highlight-changes-mode`` and set better colors. It highlights all
 ;| modifications since file open.
 ;|

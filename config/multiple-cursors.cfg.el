@@ -1,10 +1,15 @@
 ; -*- tab-width:4; fill-column:90; mode:lisp -*-
 
-;| keybindings for the multiple-cursor mode
+;| Customization for the multiple-cursor mode
 ;|
-;| FIXME: specify keybindings
+;| Keystrokes:
 ;|
-;| https://github.com/magnars/multiple-cursors.el
+;| - C-S-c C-S-c: add cursors for region
+;| - C->: add cursor for the next occurence
+;| - C->: add cursor for the previous occurence
+;| - C-c C-<: add cursors to all ocurrences
+;|
+;| See: https://github.com/magnars/multiple-cursors.el
 
 (load "package.cfg")
 

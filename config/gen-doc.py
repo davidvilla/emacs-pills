@@ -21,7 +21,8 @@ def module_doc(fname):
                 continue
 
             line = line[3:].strip('\n')
-            if line == ':skip:':
+            print line
+            if ':skip:' in line:
                 return ''
 
             retval += line + '\n'

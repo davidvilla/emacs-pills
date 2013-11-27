@@ -18,7 +18,7 @@ And run::
 Then, write down something like that in your ``~/.emacs`` and comment
 out undesired pills::
 
-  (add-to-list 'load-path "/usr/share/arco/emacs")
+  (load-file "/usr/share/emacs-pills/init.el")
   (load "auto-complete.cfg")
   (load "auto-create-dirs.cfg")
   (load "auto-insert.cfg")
@@ -30,7 +30,6 @@ out undesired pills::
   (load "flymake.cfg")
   (load "flyspell.cfg")
   (load "global-zoom.cfg")
-  (load "highlight-changes.cfg")
   (load "hl.cfg")
   (load "latex.cfg")
   (load "markdown.cfg")
@@ -39,7 +38,6 @@ out undesired pills::
   (load "move-line-or-region.cfg")
   (load "multiple-cursors.cfg")
   (load "package.cfg")
-  (load "paren-autoclose.cfg")
   (load "projectile.cfg")
   (load "psgml.cfg")
   (load "python.cfg")
@@ -175,16 +173,6 @@ of the document with specific minor modes (e.g. noweb documents)
 
 .. _zoom.cfg: https://bitbucket.org/arco_group/emacs-pills/src/tip/config/zoom.cfg.el
 
-`highlight-changes.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/highlight-changes.cfg.el>`_
-===============================================================================================================
-
-Activate ``highlight-changes-mode`` and set better colors. It highlights all
-modifications since file open.
-
-Keystrokes:
-
-- F6: shows/hide hightlight (deactivated by default).
-
 `hl.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/hl.cfg.el>`_
 =================================================================================
 
@@ -240,28 +228,27 @@ Keystrokes:
 `multiple-cursors.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/multiple-cursors.cfg.el>`_
 =============================================================================================================
 
-keybindings for the multiple-cursor mode
+Customization for the multiple-cursor mode
 
-FIXME: specify keybindings
+Keystrokes:
 
-https://github.com/magnars/multiple-cursors.el
+- C-S-c C-S-c: add cursors for region
+- C->: add cursor for the next occurence
+- C->: add cursor for the previous occurence
+- C-c C-<: add cursors to all ocurrences
+
+See: https://github.com/magnars/multiple-cursors.el
 
 `package.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/package.cfg.el>`_
 ===========================================================================================
 
-
-`paren-autoclose.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/paren-autoclose.cfg.el>`_
-===========================================================================================================
-
-Automatic close for parentheses (and other pair stuff) when you write the
-opening one.
 
 `projectile.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/projectile.cfg.el>`_
 =================================================================================================
 
 Projectile mode config and customizations
 
-Reference: https://github.com/bbatsov/projectile
+See: https://github.com/bbatsov/projectile
 
 `psgml.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/psgml.cfg.el>`_
 =======================================================================================

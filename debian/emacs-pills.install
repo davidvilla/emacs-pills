@@ -1,7 +1,9 @@
 usr/share/emacs-pills/compile-bookmarks.el
 usr/share/emacs-pills/init.el
+
 usr/share/emacs-pills/projectile.cfg.el
 usr/share/emacs-pills/multiple-cursors.cfg.el
+
 usr/share/emacs-pills/auto-complete.cfg.elc
 usr/share/emacs-pills/auto-create-dirs.cfg.elc
 usr/share/emacs-pills/auto-insert.cfg.elc
@@ -12,7 +14,6 @@ usr/share/emacs-pills/elisp.cfg.elc
 usr/share/emacs-pills/flymake.cfg.elc
 usr/share/emacs-pills/flyspell.cfg.elc
 usr/share/emacs-pills/global-zoom.cfg.elc
-usr/share/emacs-pills/highlight-changes.cfg.elc
 usr/share/emacs-pills/hl.cfg.elc
 usr/share/emacs-pills/latex.cfg.elc
 usr/share/emacs-pills/markdown.cfg.elc
@@ -20,7 +21,6 @@ usr/share/emacs-pills/maximize.cfg.elc
 usr/share/emacs-pills/minimal.cfg.elc
 usr/share/emacs-pills/move-line-or-region.cfg.elc
 usr/share/emacs-pills/package.cfg.elc
-usr/share/emacs-pills/paren-autoclose.cfg.elc
 usr/share/emacs-pills/psgml.cfg.elc
 usr/share/emacs-pills/rst.cfg.elc
 usr/share/emacs-pills/revert.cfg.elc
@@ -36,6 +36,7 @@ usr/share/emacs-pills/uniquify.cfg.elc
 usr/share/emacs-pills/window-move.cfg.elc
 usr/share/emacs-pills/zoom.cfg.elc
 usr/share/emacs-pills/schemas.xml
+
 usr/share/arco/emacs/auto-complete.cfg.el
 usr/share/arco/emacs/auto-create-dirs.cfg.el
 usr/share/arco/emacs/auto-insert.cfg.el
@@ -45,13 +46,11 @@ usr/share/arco/emacs/docbook.cfg.el
 usr/share/arco/emacs/flymake.cfg.el
 usr/share/arco/emacs/flyspell.cfg.el
 usr/share/arco/emacs/global-zoom.cfg.el
-usr/share/arco/emacs/highlight-changes.cfg.el
 usr/share/arco/emacs/hl.cfg.el
 usr/share/arco/emacs/latex.cfg.el
 usr/share/arco/emacs/maximize.cfg.el
 usr/share/arco/emacs/minimal.cfg.el
 usr/share/arco/emacs/move-line-or-region.cfg.el
-usr/share/arco/emacs/paren-autoclose.cfg.el
 usr/share/arco/emacs/psgml.cfg.el
 usr/share/arco/emacs/rst.cfg.el
 usr/share/arco/emacs/slice.cfg.el
@@ -62,4 +61,5 @@ usr/share/arco/emacs/toggle-split.cfg.el
 usr/share/arco/emacs/uniquify.cfg.el
 usr/share/arco/emacs/window-move.cfg.el
 usr/share/arco/emacs/zoom.cfg.el
+
 usr/share/emacs/site-lisp/yasnippet/snippets

@@ -3,7 +3,7 @@
 
 ;| Projectile mode config and customizations
 ;|
-;| Reference: https://github.com/bbatsov/projectile
+;| See: https://github.com/bbatsov/projectile
 
 (load "package.cfg")
 

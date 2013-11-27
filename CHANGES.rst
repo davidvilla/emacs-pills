@@ -1,3 +1,12 @@
+0.20131127
+==========
+
+* "package" customization and auto-install for package dependencies.
+* NEW projectile pill
+* NEW multiple-cursors pill
+* highlight-changes temporally disabled
+* paren-autoclose temporally disabled
+
 0.20130517
 ==========
 
