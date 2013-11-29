@@ -26,7 +26,6 @@ out undesired pills::
   (load "compile.cfg")
   (load "docbook.cfg")
   (load "elisp.cfg")
-  (load "epy-nose.cfg")
   (load "flymake.cfg")
   (load "flyspell.cfg")
   (load "global-zoom.cfg")
@@ -36,12 +35,8 @@ out undesired pills::
   (load "maximize.cfg")
   (load "minimal.cfg")
   (load "move-line-or-region.cfg")
-  (load "multiple-cursors.cfg")
   (load "package.cfg")
-  (load "paren-autoclose.cfg")
-  (load "projectile.cfg")
   (load "psgml.cfg")
-  (load "python.cfg")
   (load "revert.cfg")
   (load "rst.cfg")
   (load "shut-up.cfg")
@@ -54,6 +49,11 @@ out undesired pills::
   (load "uniquify.cfg")
   (load "window-move.cfg")
   (load "zoom.cfg")
+  (load "multiple-cursors.cfg")
+  (load "paren-autoclose.cfg")
+  (load "projectile.cfg")
+  (load "epy-nose.cfg")  ;requires emacs-pills-python
+  (load "python.cfg")  ;requires emacs-pills-python
 
 `auto-complete.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/auto-complete.cfg.el>`_
 =======================================================================================================
@@ -127,21 +127,6 @@ elisp utitlity functions
 - eval-and-replace
 
 (new in version 0.20130619)
-
-`epy-nose.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/epy-nose.cfg.el>`_
-=============================================================================================
-
-nose python test runner bindings:
-
-- C-ca   Run all tests
-- C-cM   Run module tests
-- C-c.   Run current test
-- C-cx   Stop nose
-- C-cpa  Run all tests (run pdb on fail)
-- C-cpm  Run module tests (run pdb on fail)
-- C-cp.  Run current test (run pdb on fail)
-
-(new in version 0.20130327)
 
 `flymake.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/flymake.cfg.el>`_
 ===========================================================================================
@@ -226,49 +211,15 @@ Keystrokes:
 - M-up:   move text up
 - M-down: move text down
 
-`multiple-cursors.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/multiple-cursors.cfg.el>`_
-=============================================================================================================
-
-Customization for the multiple-cursor mode
-
-Keystrokes:
-
-- C-S-c C-S-c: add cursors for region
-- C->: add cursor for the next occurence
-- C->: add cursor for the previous occurence
-- C-c C-<: add cursors to all ocurrences
-
-See: https://github.com/magnars/multiple-cursors.el
-
 `package.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/package.cfg.el>`_
 ===========================================================================================
 
-
-`paren-autoclose.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/paren-autoclose.cfg.el>`_
-===========================================================================================================
-
-Automatic close for parentheses (and other pair stuff) when you write the
-opening one. Now using "autopair"
-
-
-`projectile.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/projectile.cfg.el>`_
-=================================================================================================
-
-Projectile mode config and customizations
-
-See: https://github.com/bbatsov/projectile
 
 `psgml.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/psgml.cfg.el>`_
 =======================================================================================
 
 - Better faces and highlight for sgml-mode
 - Automatic DTD detection and loading.
-
-`python.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/python.cfg.el>`_
-=========================================================================================
-
-flymake configuration for python-mode (enabled by default).
-Set pyflakes as Python syntax checker. Run with C-c C-v
 
 `revert.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/revert.cfg.el>`_
 =========================================================================================

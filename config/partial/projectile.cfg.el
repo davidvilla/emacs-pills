@@ -4,6 +4,8 @@
 ;| Projectile mode config and customizations
 ;|
 ;| See: https://github.com/bbatsov/projectile
+;|
+;| (new in version 0.20131129)
 
 (load "package.cfg")
 

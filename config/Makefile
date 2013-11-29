@@ -1,7 +1,8 @@
 SOURCES=$(wildcard *.cfg.el)
 
 all:  ../README.rst
-	find . -name "*.cfg.el" | awk '{print "(byte-compile-file \"" $$1 "\")";}' | grep -v "multiple-cursors" | grep -v "projectile" | grep -v "paren-autoclose" > bytecompile.el
+	echo $(shell pwd)
+	ls *.cfg.el | awk '{print "(byte-compile-file \"" $$1 "\")";}' > bytecompile.el
 	/usr/bin/emacs -L ../modules -batch -l bytecompile.el -kill
 
 %.html: %.rst $(SOURCES) gen-doc.py
@@ -13,10 +14,13 @@ all:  ../README.rst
 ../README.rst: $(SOURCES) Makefile header.rst gen-doc.py template.el
 	./gen-doc.py $@
 
-template.el: $(SOURCES)
+template.el: $(SOURCES) Makefile
 	@echo \(load-file \"/usr/share/emacs-pills/init.el\"\) > $@
-	@for f in *.cfg.el; do \
-	   echo \(load \"$$(basename $$f .el)\"\) >> $@; \
+	@for f in *.cfg.el partial/*.cfg.el; do \
+	   echo "(load \"$$(basename $$f .el)\")" >> $@; \
+	done
+	@for f in python/*.cfg.el; do \
+	   echo "(load \"$$(basename $$f .el)\")  ;requires emacs-pills-python" >> $@; \
 	done
 
 clean:

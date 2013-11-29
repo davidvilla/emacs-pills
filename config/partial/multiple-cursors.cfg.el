@@ -10,6 +10,8 @@
 ;| - C-c C-<: add cursors to all ocurrences
 ;|
 ;| See: https://github.com/magnars/multiple-cursors.el
+;|
+;| (new in version 0.20131129)
 
 (load "package.cfg")
 

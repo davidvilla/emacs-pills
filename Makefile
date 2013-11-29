@@ -41,16 +41,14 @@ install:
 
 	install -vd $(BASE)
 	install -vm 444 config/*.cfg.elc $(BASE)/
-
-	install -vm 444 config/multiple-cursors.cfg.el $(BASE)/
-	install -vm 444 config/projectile.cfg.el $(BASE)/
-	install -vm 444 config/paren-autoclose.cfg.el $(BASE)/
+	install -vm 444 config/partial/*.cfg.el $(BASE)/
+	install -vm 444 config/python/*.cfg.el $(BASE)/
 
 	install -vm 444 config/template.el $(BASE)/
 	install -vm 444 config/init.el $(BASE)/
 
-	install -vd $(BASE)/23
 	install -vm 444 modules/*.el $(BASE)/
+	install -vd $(BASE)/23
 	install -vm 444 modules/23/*.el $(BASE)/23/
 
 	for i in $$(find config -name "*.cfg.el" -exec basename {} \;); do \
