@@ -43,6 +43,9 @@
 ; kill (and thus paste) text from read-only buffer
 (setq kill-read-only-ok 1)
 
+; If the buffer is already displayed in a frame, raise that frame.
+(setq-default display-buffer-reuse-frames t)
+
 ; disable C-z on X11 sessions
 ;; (when window-system
 ;;   (global-unset-key "\C-z")

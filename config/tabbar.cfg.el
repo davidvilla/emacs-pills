@@ -11,8 +11,7 @@
 ;| Keystrokes:
 ;|
 ;| - M-<n> to change among the first 10 tabs
-;| - C-S-left and C-S-right to change among buffers in the same group.
-;| - C-S-up and C-S-down to change among groups.
+;| - C-S-left and C-S-right to change among 
 
 (custom-set-faces
  '(tabbar-default
@@ -42,9 +41,26 @@
 (setq tabbar-cycle-scope (quote tabs))
 (setq tabbar-use-images t)
 
+(defun tabbar-group-message ()
+  (message (concat "tabbar group is: " 
+		   (car (funcall tabbar-buffer-groups-function))))
+)
+
+(defun tabbar-group-up ()
+  (interactive)
+  (tabbar-forward-group)
+  (tabbar-group-message)
+)
+
+(defun tabbar-group-down ()
+  (interactive)
+  (tabbar-backward-group)
+  (tabbar-group-message)
+)
+
 (global-set-key [(control shift t)] 'tabbar-mode)
-(global-set-key [(control shift up)] 'tabbar-backward-group)
-(global-set-key [(control shift down)] 'tabbar-forward-group)
+(global-set-key [(control shift up)] 'tabbar-group-up)
+(global-set-key [(control shift down)] 'tabbar-group-down)
 (global-set-key [(control shift left)] 'tabbar-backward)
 (global-set-key [(control shift right)] 'tabbar-forward)
 

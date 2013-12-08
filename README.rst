@@ -36,6 +36,7 @@ out undesired pills::
   (load "minimal.cfg")
   (load "move-line-or-region.cfg")
   (load "package.cfg")
+  (load "projector.cfg")
   (load "psgml.cfg")
   (load "revert.cfg")
   (load "rst.cfg")
@@ -215,6 +216,10 @@ Keystrokes:
 ===========================================================================================
 
 
+`projector.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/projector.cfg.el>`_
+===============================================================================================
+
+
 `psgml.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/psgml.cfg.el>`_
 =======================================================================================
 
@@ -269,8 +274,7 @@ A very good customization for tabbar-mode.
 Keystrokes:
 
 - M-<n> to change among the first 10 tabs
-- C-S-left and C-S-right to change among buffers in the same group.
-- C-S-up and C-S-down to change among groups.
+- C-S-left and C-S-right to change among 
 
 `toggle-id-style.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/toggle-id-style.cfg.el>`_
 ===========================================================================================================

@@ -30,7 +30,7 @@
 ; References:
 ; - http://vwood.github.com/emacs-compile-on-save.html
 ; - http://comments.gmane.org/gmane.emacs.devel/156498
-; - from http://emacswiki.org/emacs/CompileCommand (Xu Yuan)
+; - http://emacswiki.org/emacs/CompileCommand (Xu Yuan)
 ; - http://emacswiki.org/emacs/CompileCommand (Recompiling)
 ; - http://rtime.felk.cvut.cz/~sojka/blog/compile-on-save/
 
@@ -48,7 +48,6 @@
 
 (defvar open-compilation-buffer-flag)
 
-; http://lazywithclass.posterous.com/emacs-functions-to-ease-tdd
 (defun modeline-set-color (color)
   "Colors the modeline"
   (interactive)
@@ -116,10 +115,10 @@
   	   (sit-for 1.5)
   	   ))
 
-  ;; (ignore-errors
-  ;;   (progn (process-kill-without-query
-  ;; 	    (get-buffer-process (get-buffer "*compilation*")))
-  ;; 	   (modeline-set-color "DeepSkyBlue")))
+; (ignore-errors
+;   (progn (process-kill-without-query
+; 	    (get-buffer-process (get-buffer "*compilation*")))
+; 	   (modeline-set-color "DeepSkyBlue")))
 
 ;  (condition-case nil
 ;      (process-kill-without-query

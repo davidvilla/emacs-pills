@@ -1,0 +1,16 @@
+(add-hook 'c-mode-hook
+	  (lambda()
+	    (local-set-key  (kbd "C-c o") 'ff-find-other-file)))
+
+(add-hook 'c-mode-common-hook
+  (lambda()
+    (require 'dtrt-indent)
+    (dtrt-indent-mode t)))
+
+(autoload 'dtrt-indent-mode "dtrt-indent" "Adapt to foreign indentation offsets" t)
+(add-hook 'c-mode-common-hook 'dtrt-indent-mode)
+
+(add-hook 'c-mode-common-hook
+	  (lambda ()
+	    (font-lock-add-keywords nil
+               '(("\\<\\(FIXME\\|TODO\\|BUG\\):" 1 font-lock-warning-face t)))))

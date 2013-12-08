@@ -16,6 +16,7 @@
 (load "minimal.cfg")
 (load "move-line-or-region.cfg")
 (load "package.cfg")
+(load "projector.cfg")
 (load "psgml.cfg")
 (load "revert.cfg")
 (load "rst.cfg")
