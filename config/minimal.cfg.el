@@ -47,14 +47,19 @@
 (setq-default display-buffer-reuse-frames t)
 
 ; disable C-z on X11 sessions
-;; (when window-system
-;;   (global-unset-key "\C-z")
-;;   (global-unset-key "\C-x\C-z")
-;;   )
-
-(when window-system
-  (global-set-key (kbd "C-Z") nil)
+(add-hook 'after-make-frame-functions
+  (lambda (frame)
+	(select-frame frame)
+	(when window-system
+	  (global-set-key "\C-z" nil)
+	  (global-set-key "\C-x\C-z" nil)
+	  )
+	)
   )
+
+;; (when window-system
+;;   (global-set-key (kbd "C-Z") nil)
+;;   )
 
 ; Remember cursor position in edited files
 ; (require 'saveplace)
@@ -66,13 +71,11 @@
                 (abbreviate-file-name (buffer-file-name))
                   "%b")) " [%*]"))
 
-
-; Automatically create missing parent directories when you 'open' a new file
-; http://atomized.org/2008/12/emacs-create-directory-before-saving/
-(add-hook 'before-save-hook
-  '(lambda ()
-  	 (or (file-exists-p (file-name-directory buffer-file-name))
-  		 (make-directory (file-name-directory buffer-file-name) t))))
-
 ; Icons-only for the toolbar
 (setq tool-bar-style (quote image))
+
+; http://emacsredux.com/blog/2013/05/04/erase-buffer/
+(put 'erase-buffer 'disabled nil)
+
+; http://www.masteringemacs.org/articles/2011/10/02/improving-performance-emacs-display-engine/
+(setq redisplay-dont-pause t)
