@@ -9,6 +9,7 @@
 (load "flymake.cfg")
 (load "flyspell.cfg")
 (load "global-zoom.cfg")
+(load "highlight-changes.cfg")
 (load "hl.cfg")
 (load "latex.cfg")
 (load "markdown.cfg")

@@ -1,6 +1,15 @@
+; -*- tab-width:4; fill-column:90; mode:lisp -*-
+
+;| Minor mode to gain screen space when use a projector
+;|
+;| - Hides toolbar, menubar and scrollbar
+;| - Activates hl-line and linum modes
+;|
+;| (new in version FIXME)
+
 (define-minor-mode
   projector-mode
-  "some doc"
+  "projector-aware minor mode"
   nil
   nil
   nil

@@ -57,10 +57,6 @@
 	)
   )
 
-;; (when window-system
-;;   (global-set-key (kbd "C-Z") nil)
-;;   )
-
 ; Remember cursor position in edited files
 ; (require 'saveplace)
 ; (setq-default save-place t)
@@ -71,7 +67,7 @@
                 (abbreviate-file-name (buffer-file-name))
                   "%b")) " [%*]"))
 
-; Icons-only for the toolbar
+; icons-only for the toolbar
 (setq tool-bar-style (quote image))
 
 ; http://emacsredux.com/blog/2013/05/04/erase-buffer/

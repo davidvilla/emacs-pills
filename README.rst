@@ -29,6 +29,7 @@ out undesired pills::
   (load "flymake.cfg")
   (load "flyspell.cfg")
   (load "global-zoom.cfg")
+  (load "highlight-changes.cfg")
   (load "hl.cfg")
   (load "latex.cfg")
   (load "markdown.cfg")
@@ -160,6 +161,16 @@ of the document with specific minor modes (e.g. noweb documents)
 
 .. _zoom.cfg: https://bitbucket.org/arco_group/emacs-pills/src/tip/config/zoom.cfg.el
 
+`highlight-changes.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/highlight-changes.cfg.el>`_
+===============================================================================================================
+
+Activate ``highlight-changes`` minor mode and set better colors. It highlights all
+modifications since file was open.
+
+Keystrokes:
+
+- F6: shows/hide hightlight (deactivated by default).
+
 `hl.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/hl.cfg.el>`_
 =================================================================================
 
@@ -219,6 +230,12 @@ Keystrokes:
 `projector.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/projector.cfg.el>`_
 ===============================================================================================
 
+Minor mode to gain screen space when use a projector
+
+- Hides toolbar, menubar and scrollbar
+- Activates hl-line and linum modes
+
+(new in version FIXME)
 
 `psgml.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/psgml.cfg.el>`_
 =======================================================================================
@@ -274,7 +291,7 @@ A very good customization for tabbar-mode.
 Keystrokes:
 
 - M-<n> to change among the first 10 tabs
-- C-S-left and C-S-right to change among 
+- C-S-left and C-S-right to change among
 
 `toggle-id-style.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/toggle-id-style.cfg.el>`_
 ===========================================================================================================

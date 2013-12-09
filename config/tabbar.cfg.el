@@ -11,7 +11,7 @@
 ;| Keystrokes:
 ;|
 ;| - M-<n> to change among the first 10 tabs
-;| - C-S-left and C-S-right to change among 
+;| - C-S-left and C-S-right to change among
 
 (custom-set-faces
  '(tabbar-default
@@ -42,7 +42,7 @@
 (setq tabbar-use-images t)
 
 (defun tabbar-group-message ()
-  (message (concat "tabbar group is: " 
+  (message (concat "tabbar group: "
 		   (car (funcall tabbar-buffer-groups-function))))
 )
 
