@@ -75,3 +75,7 @@
 
 ; http://www.masteringemacs.org/articles/2011/10/02/improving-performance-emacs-display-engine/
 (setq redisplay-dont-pause t)
+
+; save external copied content to kill-ring
+; https://github.com/technomancy/better-defaults/blob/master/better-defaults.el
+(setq save-interprogram-paste-before-kill t)
