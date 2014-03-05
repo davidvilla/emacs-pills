@@ -64,27 +64,26 @@
 (global-set-key [(control shift left)] 'tabbar-backward)
 (global-set-key [(control shift right)] 'tabbar-forward)
 
-;; (setq tabbar-buffer-groups-function
-;;       (lambda ()
-;; 	(list (cond
-;; 	       ((string-equal "*" (substring (buffer-name) 0 1)) "Emacs")
-;; 	       ((eq major-mode 'dired-mode) "Dired")
-;; 	       ((eq major-mode 'compilation-mode) "Compilation")
-;; 	       (t "User")
-;; 	       ))))
-
-
 (setq tabbar-buffer-groups-function
       (lambda ()
-	(let ((dir (expand-file-name default-directory)))
-	  (cond
-	   ((eq major-mode 'compilation-mode) (list "Compilation"))
-	   ((string-equal "*" (substring (buffer-name) 0 1)) (list "Emacs"))
-	   ((eq major-mode 'dired-mode) (list "Dired"))
-	   ((string-match-p "/.emacs.d/" dir) (list ".emacs.d"))
-	   (t (list dir)))
-	  )))
+	(list (cond
+	       ((string-equal "*" (substring (buffer-name) 0 1)) "Emacs")
+	       ((eq major-mode 'dired-mode) "Dired")
+	       ((eq major-mode 'compilation-mode) "Compilation")
+	       (t "User")
+	       ))))
 
+
+;; (setq tabbar-buffer-groups-function
+;;       (lambda ()
+;; 	(let ((dir (expand-file-name default-directory)))
+;; 	  (cond
+;; 	   ((eq major-mode 'compilation-mode) (list "Compilation"))
+;; 	   ((string-equal "*" (substring (buffer-name) 0 1)) (list "Emacs"))
+;; 	   ((eq major-mode 'dired-mode) (list "Dired"))
+;; 	   ((string-match-p "/.emacs.d/" dir) (list ".emacs.d"))
+;; 	   (t (list dir)))
+;; 	  )))
 
 
 ;--- from  http://emacswiki.org/emacs/TabBarMode

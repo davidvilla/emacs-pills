@@ -1,3 +1,10 @@
+emacs-pills (0.20140305-1) unstable; urgency=low
+
+  * New release
+  * removing projectile pill due to performance issues
+
+ -- David Villa Alises <David.Villa@gmail.com>  Wed, 05 Mar 2014 13:51:22 +0100
+
 emacs-pills (0.20131209-1) unstable; urgency=low
 
   * New release

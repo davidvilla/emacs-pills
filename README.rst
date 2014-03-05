@@ -2,7 +2,7 @@
 Modular Emacs Configuration
 ===========================
 
-It is a set of configuration config "fragments" (pills) that you may use independently,
+It is a set of configuration "fragments" (pills) that you may use independently,
 but it is warrantied that all of them work well together.
 
 To use one of these in your Emacs you must install the ``emacs-pills`` debian

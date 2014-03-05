@@ -2,7 +2,6 @@ usr/share/emacs-pills/compile-bookmarks.el
 usr/share/emacs-pills/init.el
 usr/share/emacs-pills/23
 
-usr/share/emacs-pills/projectile.cfg.el
 usr/share/emacs-pills/multiple-cursors.cfg.el
 usr/share/emacs-pills/paren-autoclose.cfg.el
 
