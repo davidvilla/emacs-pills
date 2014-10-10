@@ -53,7 +53,6 @@ out undesired pills::
   (load "zoom.cfg")
   (load "multiple-cursors.cfg")
   (load "paren-autoclose.cfg")
-  (load "projectile.cfg")
   (load "epy-nose.cfg")  ;requires emacs-pills-python
   (load "python.cfg")  ;requires emacs-pills-python
 
