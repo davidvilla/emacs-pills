@@ -340,4 +340,3 @@ Keystrokes:
 - C-<plus> or C-mousewheel-up: increases font size.
 - C-<minus> or C-mousewheel-down: decreases font size.
 - C-0 reverts font size to default.
-
