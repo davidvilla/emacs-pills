@@ -3,4 +3,4 @@
 #key: !rb
 # --
 #!/usr/bin/env ruby
-# -*- mode:ruby; coding:utf-8; tab-width:4 -*-
+# -*- coding: utf-8; mode: ruby; tab-width: 4 -*-

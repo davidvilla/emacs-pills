@@ -3,4 +3,4 @@
 #key: !
 # --
 #!/usr/bin/make -f
-# -*- mode:makefile -*-
+# -*- mode: makefile -*-

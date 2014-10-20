@@ -3,4 +3,4 @@
 #key: !
 # --
 #!/usr/bin/env python
-# -*- mode:python; coding:utf-8; tab-width:4 -*-
+# -*- coding: utf-8; mode: python; -*-
