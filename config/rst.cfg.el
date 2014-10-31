@@ -1,4 +1,4 @@
-;| Activate rst-mode for *.rst files
+;| Activate rst-mode for .rst files
 
 ; ;; ReST
 (require 'rst)

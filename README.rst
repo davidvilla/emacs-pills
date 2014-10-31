@@ -250,7 +250,7 @@ revert-buffer customization: keep undo history
 `rst.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/rst.cfg.el>`_
 ===================================================================================
 
-Activate rst-mode for *.rst files
+Activate rst-mode for .rst files
 
 `shut-up.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/shut-up.cfg.el>`_
 ===========================================================================================
