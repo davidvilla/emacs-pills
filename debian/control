@@ -5,7 +5,7 @@ Maintainer: ARCO Research Group <sysadm@arco.esi.uclm.es>
 Uploaders: David Villa Alises <David.Villa@gmail.com>
 Build-Depends: debhelper (>= 7.0.50~), yasnippet, emacs-goodies-el
 Standards-Version: 3.9.6
-Homepage: https://bitbucket.org/arco_group/emacs-pills
+Homepage: https://bitbucket.org/DavidVilla/emacs-pills
 
 Package: emacs-pills
 Architecture: all
