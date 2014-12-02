@@ -11,7 +11,8 @@
 ;| Keystrokes:
 ;|
 ;| - M-<n> to change among the first 10 tabs
-;| - C-S-left and C-S-right to change among
+;| - C-S o and C-S-p to change among tabs
+;| - C-S-i and C-S-j to change among groups
 
 (custom-set-faces
  '(tabbar-default
@@ -59,10 +60,10 @@
 )
 
 (global-set-key [(control shift t)] 'tabbar-mode)
-(global-set-key [(control shift up)] 'tabbar-group-up)
-(global-set-key [(control shift down)] 'tabbar-group-down)
-(global-set-key [(control shift left)] 'tabbar-backward)
-(global-set-key [(control shift right)] 'tabbar-forward)
+(global-set-key [(control shift i)] 'tabbar-group-up)
+(global-set-key [(control shift j)] 'tabbar-group-down)
+(global-set-key [(control shift o)] 'tabbar-backward)
+(global-set-key [(control shift p)] 'tabbar-forward)
 
 (setq tabbar-buffer-groups-function
       (lambda ()

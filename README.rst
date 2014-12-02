@@ -290,7 +290,8 @@ A very good customization for tabbar-mode.
 Keystrokes:
 
 - M-<n> to change among the first 10 tabs
-- C-S-left and C-S-right to change among
+- C-S o and C-S-p to change among tabs
+- C-S-i and C-S-j to change among groups
 
 `toggle-id-style.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/toggle-id-style.cfg.el>`_
 ===========================================================================================================
@@ -340,5 +341,3 @@ Keystrokes:
 - C-<plus> or C-mousewheel-up: increases font size.
 - C-<minus> or C-mousewheel-down: decreases font size.
 - C-0 reverts font size to default.
-
-[testing github sync]

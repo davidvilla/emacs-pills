@@ -1,4 +1,5 @@
 ;http://stackoverflow.com/questions/2423834/move-line-region-up-and-down-in-emacs
+;http://stackoverflow.com/a/2426347/722624
 
 ;| Move line (or current selected area) up and down.
 ;|
@@ -26,7 +27,12 @@
       (when (or (> arg 0) (not (bobp)))
         (forward-line)
         (when (or (< arg 0) (not (eobp)))
-          (transpose-lines arg))
+          (transpose-lines arg)
+          (when (and (eval-when-compile
+                       '(and (>= emacs-major-version 24)
+                             (>= emacs-minor-version 3)))
+                     (< arg 0))
+            (forward-line -1)))
         (forward-line -1))
       (move-to-column column t)))))
 

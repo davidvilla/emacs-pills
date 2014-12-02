@@ -1,3 +1,9 @@
+0.20141202
+==========
+
+* updated move-line-or-region.cfg.el for emacs 24.3
+* tabbar keybindings changed (Fixes https://bitbucket.org/DavidVilla/emacs-pills/issue/4)
+
 0.20131127
 ==========
 
