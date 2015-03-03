@@ -1,0 +1,35 @@
+#contributor : <David.Villa@gmail.com>
+#name: ZeroC Ice server
+#key: ice-server
+# --
+
+import sys
+import Ice
+Ice.loadSlice('Printer.ice')
+import Example
+
+
+class PrinterI(Example.Printer):
+    def write(self, current=None):
+        pass
+
+
+class Server(Ice.Application):
+    def run(self, argv):
+        ic = self.communicator()
+        servant = PrinterI()
+
+        adapter = ic.createObjectAdapter("PrinterAdapter")
+        proxy = adapter.add(servant, ic.stringToIdentity("printer1"))
+
+        print(proxy)
+
+        adapter.activate()
+        self.shutdownOnInterrupt()
+        ic.waitForShutdown()
+
+        return 0
+
+
+if __name__ == '__main__':
+    sys.exit(Server().main(sys.argv))

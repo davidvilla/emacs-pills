@@ -74,6 +74,23 @@
 	       (t "User")
 	       ))))
 
+;; ; https://gitorious.org/distopico/distopico-dotemacs/source/e6a5aaf153d7ade7180c696173e60e544a9ac0fc:emacs/modes/conf-tabbar.el#LNaN-NaN
+;; ;; tabbar grouping method
+;; (defun tabbar-buffer-groups-by-dir ()
+;;         "Put all files in the same directory into the same tab bar"
+;;         (with-current-buffer (current-buffer)
+;;           (let ((dir (expand-file-name default-directory)))
+;;             (cond ;; assign group name until one clause succeeds, so the order is important
+;;              ((eq major-mode 'dired-mode)
+;;               (list "Dired"))
+;;              ((memq major-mode
+;;                     '(help-mode apropos-mode Info-mode Man-mode))
+;;               (list "Help"))
+;;              ((string-match-p "\*.*\*" (buffer-name))
+;;               (list "Misc"))
+;;              (t (list dir))))))
+
+;; (setq tabbar-buffer-groups-function 'tabbar-buffer-groups-by-dir)
 
 ;; (setq tabbar-buffer-groups-function
 ;;       (lambda ()
