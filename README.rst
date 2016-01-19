@@ -331,6 +331,11 @@ Keystrokes:
 - Control-Super-up:    Move to upper window
 - Control-Super-down:  Move to downer window
 
+`yaml.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/yaml.cfg.el>`_
+=====================================================================================
+
+Basic configuration for ``yaml-mode``
+
 `zoom.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/zoom.cfg.el>`_
 =====================================================================================
 

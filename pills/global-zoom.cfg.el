@@ -11,7 +11,7 @@
 ;| In contrast to `zoom.cfg`_ this version persists across multiple areas
 ;| of the document with specific minor modes (e.g. noweb documents)
 ;|
-;| .. _zoom.cfg: https://bitbucket.org/arco_group/emacs-pills/src/tip/config/zoom.cfg.el
+;| .. _zoom.cfg: https://bitbucket.org/arco_group/emacs-pills/src/tip/pills/zoom.cfg.el
 
 
 ; http://www.emacswiki.org/emacs/GlobalTextScaleMode
