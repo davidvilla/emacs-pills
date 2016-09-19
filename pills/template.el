@@ -30,6 +30,7 @@
 (load "toggle-split.cfg")
 (load "uniquify.cfg")
 (load "window-move.cfg")
+(load "yaml.cfg")
 (load "zoom.cfg")
 (load "multiple-cursors.cfg")
 (load "paren-autoclose.cfg")

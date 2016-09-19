@@ -50,13 +50,14 @@ out undesired pills::
   (load "toggle-split.cfg")
   (load "uniquify.cfg")
   (load "window-move.cfg")
+  (load "yaml.cfg")
   (load "zoom.cfg")
   (load "multiple-cursors.cfg")
   (load "paren-autoclose.cfg")
   (load "epy-nose.cfg")  ;requires emacs-pills-python
   (load "python.cfg")  ;requires emacs-pills-python
 
-`auto-complete.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/auto-complete.cfg.el>`_
+`auto-complete.cfg <https://bitbucket.org/DavidVilla/emacs-pills/src/tip/pills//auto-complete.cfg.el>`_
 =======================================================================================================
 
 Minimal configuration for auto-complete mode. This minor mode is not
@@ -64,19 +65,19 @@ activated by default. You must run::
 
   M-x auto-complete-mode
 
-`auto-create-dirs.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/auto-create-dirs.cfg.el>`_
+`auto-create-dirs.cfg <https://bitbucket.org/DavidVilla/emacs-pills/src/tip/pills//auto-create-dirs.cfg.el>`_
 =============================================================================================================
 
 Create intermediate directories when saving a new file in a non existing path.
 
-`auto-insert.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/auto-insert.cfg.el>`_
+`auto-insert.cfg <https://bitbucket.org/DavidVilla/emacs-pills/src/tip/pills//auto-insert.cfg.el>`_
 ===================================================================================================
 
 It contains a set of templates that are automatically inserted when you
 create empty files. It includes default headers for Python, bash, LaTeX and
 others.
 
-`compile-bookmarks.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/compile-bookmarks.cfg.el>`_
+`compile-bookmarks.cfg <https://bitbucket.org/DavidVilla/emacs-pills/src/tip/pills//compile-bookmarks.cfg.el>`_
 ===============================================================================================================
 
 store and reuse compile commands
@@ -85,7 +86,7 @@ See http://nschum.de/src/emacs/compile-bookmarks/
 
 (new in version 0.20130327)
 
-`compile.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/compile.cfg.el>`_
+`compile.cfg <https://bitbucket.org/DavidVilla/emacs-pills/src/tip/pills//compile.cfg.el>`_
 ===========================================================================================
 
 Convenience configuration for ``compile`` command.
@@ -115,12 +116,12 @@ Keystrokes:
 
 (new in version 0.20130327)
 
-`docbook.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/docbook.cfg.el>`_
+`docbook.cfg <https://bitbucket.org/DavidVilla/emacs-pills/src/tip/pills//docbook.cfg.el>`_
 ===========================================================================================
 
 nxml-mode configuration for DocBook 4.5.
 
-`elisp.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/elisp.cfg.el>`_
+`elisp.cfg <https://bitbucket.org/DavidVilla/emacs-pills/src/tip/pills//elisp.cfg.el>`_
 =======================================================================================
 
 elisp utitlity functions
@@ -129,12 +130,12 @@ elisp utitlity functions
 
 (new in version 0.20130619)
 
-`flymake.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/flymake.cfg.el>`_
+`flymake.cfg <https://bitbucket.org/DavidVilla/emacs-pills/src/tip/pills//flymake.cfg.el>`_
 ===========================================================================================
 
 custom config and faces for flymake error highlight.
 
-`flyspell.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/flyspell.cfg.el>`_
+`flyspell.cfg <https://bitbucket.org/DavidVilla/emacs-pills/src/tip/pills//flyspell.cfg.el>`_
 =============================================================================================
 
 Better config and colors for the flyspell minor mode.
@@ -144,7 +145,7 @@ To load on other modes add something like next to your config::
 
   (add-hook 'foo-mode-hook 'turn-on-flyspell)
 
-`global-zoom.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/global-zoom.cfg.el>`_
+`global-zoom.cfg <https://bitbucket.org/DavidVilla/emacs-pills/src/tip/pills//global-zoom.cfg.el>`_
 ===================================================================================================
 
 It provides zoom on emacs in a similar way to web browsers or text processors suites.
@@ -158,9 +159,9 @@ Keystrokes:
 In contrast to `zoom.cfg`_ this version persists across multiple areas
 of the document with specific minor modes (e.g. noweb documents)
 
-.. _zoom.cfg: https://bitbucket.org/arco_group/emacs-pills/src/tip/config/zoom.cfg.el
+.. _zoom.cfg: https://bitbucket.org/arco_group/emacs-pills/src/tip/pills/zoom.cfg.el
 
-`highlight-changes.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/highlight-changes.cfg.el>`_
+`highlight-changes.cfg <https://bitbucket.org/DavidVilla/emacs-pills/src/tip/pills//highlight-changes.cfg.el>`_
 ===============================================================================================================
 
 Activate ``highlight-changes`` minor mode and set better colors. It highlights all
@@ -170,7 +171,7 @@ Keystrokes:
 
 - F6: shows/hide hightlight (deactivated by default).
 
-`hl.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/hl.cfg.el>`_
+`hl.cfg <https://bitbucket.org/DavidVilla/emacs-pills/src/tip/pills//hl.cfg.el>`_
 =================================================================================
 
 Highlight the current line.
@@ -183,7 +184,7 @@ Highlight the current line.
 
     (add-hook 'ruby-mode-hook 'local-hl-line-mode-off)
 
-`latex.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/latex.cfg.el>`_
+`latex.cfg <https://bitbucket.org/DavidVilla/emacs-pills/src/tip/pills//latex.cfg.el>`_
 =======================================================================================
 
 Activates and binds RefTeX minor mode.
@@ -191,12 +192,12 @@ Provides a live checker for flymake (disabled by default). To enable it::
 
   M-x flymake-mode
 
-`markdown.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/markdown.cfg.el>`_
+`markdown.cfg <https://bitbucket.org/DavidVilla/emacs-pills/src/tip/pills//markdown.cfg.el>`_
 =============================================================================================
 
 enable markdown-mode for .md files
 
-`maximize.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/maximize.cfg.el>`_
+`maximize.cfg <https://bitbucket.org/DavidVilla/emacs-pills/src/tip/pills//maximize.cfg.el>`_
 =============================================================================================
 
 Maximize the Emacs X window.
@@ -206,13 +207,13 @@ Keystrokes:
 - F11: toggles fullscreen.
 - C-F11: toggles vertical maximization.
 
-`minimal.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/minimal.cfg.el>`_
+`minimal.cfg <https://bitbucket.org/DavidVilla/emacs-pills/src/tip/pills//minimal.cfg.el>`_
 ===========================================================================================
 
 Basic customization useful for most of users. It does not provide new keystrokes or
 commands.
 
-`move-line-or-region.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/move-line-or-region.cfg.el>`_
+`move-line-or-region.cfg <https://bitbucket.org/DavidVilla/emacs-pills/src/tip/pills//move-line-or-region.cfg.el>`_
 ===================================================================================================================
 
 Move line (or current selected area) up and down.
@@ -222,11 +223,11 @@ Keystrokes:
 - M-up:   move text up
 - M-down: move text down
 
-`package.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/package.cfg.el>`_
+`package.cfg <https://bitbucket.org/DavidVilla/emacs-pills/src/tip/pills//package.cfg.el>`_
 ===========================================================================================
 
 
-`projector.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/projector.cfg.el>`_
+`projector.cfg <https://bitbucket.org/DavidVilla/emacs-pills/src/tip/pills//projector.cfg.el>`_
 ===============================================================================================
 
 Minor mode to gain screen space when use a projector
@@ -236,38 +237,38 @@ Minor mode to gain screen space when use a projector
 
 (new in version FIXME)
 
-`psgml.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/psgml.cfg.el>`_
+`psgml.cfg <https://bitbucket.org/DavidVilla/emacs-pills/src/tip/pills//psgml.cfg.el>`_
 =======================================================================================
 
 - Better faces and highlight for sgml-mode
 - Automatic DTD detection and loading.
 
-`revert.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/revert.cfg.el>`_
+`revert.cfg <https://bitbucket.org/DavidVilla/emacs-pills/src/tip/pills//revert.cfg.el>`_
 =========================================================================================
 
 revert-buffer customization: keep undo history
 
-`rst.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/rst.cfg.el>`_
+`rst.cfg <https://bitbucket.org/DavidVilla/emacs-pills/src/tip/pills//rst.cfg.el>`_
 ===================================================================================
 
 Activate rst-mode for .rst files
 
-`shut-up.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/shut-up.cfg.el>`_
+`shut-up.cfg <https://bitbucket.org/DavidVilla/emacs-pills/src/tip/pills//shut-up.cfg.el>`_
 ===========================================================================================
 
 Make emacs quieter
 
-`slice.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/slice.cfg.el>`_
+`slice.cfg <https://bitbucket.org/DavidVilla/emacs-pills/src/tip/pills//slice.cfg.el>`_
 =======================================================================================
 
 Syntax highlight (with c++-mode) for .ice files
 
-`speedbar.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/speedbar.cfg.el>`_
+`speedbar.cfg <https://bitbucket.org/DavidVilla/emacs-pills/src/tip/pills//speedbar.cfg.el>`_
 =============================================================================================
 
 It provides F9 to show/hide the speedbar, and set position to right.
 
-`strip.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/strip.cfg.el>`_
+`strip.cfg <https://bitbucket.org/DavidVilla/emacs-pills/src/tip/pills//strip.cfg.el>`_
 =======================================================================================
 
 On save, automatically:
@@ -277,7 +278,7 @@ On save, automatically:
 
 Keystrokes: None
 
-`tabbar.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/tabbar.cfg.el>`_
+`tabbar.cfg <https://bitbucket.org/DavidVilla/emacs-pills/src/tip/pills//tabbar.cfg.el>`_
 =========================================================================================
 
 A very good customization for tabbar-mode.
@@ -293,7 +294,7 @@ Keystrokes:
 - C-S o and C-S-p to change among tabs
 - C-S-i and C-S-j to change among groups
 
-`toggle-id-style.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/toggle-id-style.cfg.el>`_
+`toggle-id-style.cfg <https://bitbucket.org/DavidVilla/emacs-pills/src/tip/pills//toggle-id-style.cfg.el>`_
 ===========================================================================================================
 
 toggle between CamelCase and underscore_lowercase identifiers
@@ -304,14 +305,14 @@ Keystrokes:
 
 (new in version 0.20130619)
 
-`toggle-split.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/toggle-split.cfg.el>`_
+`toggle-split.cfg <https://bitbucket.org/DavidVilla/emacs-pills/src/tip/pills//toggle-split.cfg.el>`_
 =====================================================================================================
 
 Keystrokes:
 
 - C-x 4: Changes among vertical and horizontal two-window layouts.
 
-`uniquify.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/uniquify.cfg.el>`_
+`uniquify.cfg <https://bitbucket.org/DavidVilla/emacs-pills/src/tip/pills//uniquify.cfg.el>`_
 =============================================================================================
 
 uniquify customization to use directory instead of a number to differentiate
@@ -319,7 +320,7 @@ buffers with the same filename.
 
 Keystrokes: None
 
-`window-move.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/window-move.cfg.el>`_
+`window-move.cfg <https://bitbucket.org/DavidVilla/emacs-pills/src/tip/pills//window-move.cfg.el>`_
 ===================================================================================================
 
 Move among windows with keyboard
@@ -331,12 +332,12 @@ Keystrokes:
 - Control-Super-up:    Move to upper window
 - Control-Super-down:  Move to downer window
 
-`yaml.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/yaml.cfg.el>`_
+`yaml.cfg <https://bitbucket.org/DavidVilla/emacs-pills/src/tip/pills//yaml.cfg.el>`_
 =====================================================================================
 
 Basic configuration for ``yaml-mode``
 
-`zoom.cfg <https://bitbucket.org/arco_group/emacs-pills/src/tip/config/zoom.cfg.el>`_
+`zoom.cfg <https://bitbucket.org/DavidVilla/emacs-pills/src/tip/pills//zoom.cfg.el>`_
 =====================================================================================
 
 It provides zoom on emacs in a similar way to web browsers or text processors suites.
