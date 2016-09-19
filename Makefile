@@ -52,13 +52,8 @@ install:
 	install -vm 444 modules/23/*.el $(BASE)/23/
 
 	for i in $$(find pills -name "*.cfg.el" -exec basename {} \;); do \
-	    echo  "(message \"Deprecation warning: 'emacs-pills' is now at /usr/share/emacs-pills. Undate your .emacs\")\n(load \"/usr/share/emacs-pills/$${i}c\")" > $(OLDBASE)/$$i; \
+	    echo  "(message \"Deprecation warning: 'emacs-pills' is now at /usr/share/emacs-pills. Update your .emacs\")\n(load \"/usr/share/emacs-pills/$${i}c\")" > $(OLDBASE)/$$i; \
 	done
-
-#	for i in $$(find pills -name "*.cfg.el" -exec basename {} \;); do \
-#	    echo  "(message \"Deprecation warning: 'emacs-pills' is now at /usr/share/emacs-pills. Undate your .emacs\")\n(add-to-ordered-list 'load-path \"/usr/share/emacs-pills\")\n(load \"$$i\")" > $(OLDBASE)/$$i; \
-#	done
-
 
 	install -vm 444 pills/schemas.xml $(BASE)/
 # 	@$(WGET) $(DOCBOOK)/docbook.rnc  -O $(BASE)/docbook.rnc

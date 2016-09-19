@@ -4,7 +4,7 @@
 import sys
 import glob
 
-REPO = 'https://bitbucket.org/arco_group/emacs-pills/src/tip/config'
+REPO = 'https://bitbucket.org/DavidVilla/emacs-pills/src/tip/pills/'
 
 
 def gen_title(text, level='='):
