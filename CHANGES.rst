@@ -4,6 +4,11 @@
 * updated move-line-or-region.cfg.el for emacs 24.3
 * tabbar keybindings changed (Fixes https://bitbucket.org/DavidVilla/emacs-pills/issue/4)
 
+0.20140305
+==========
+
+* removing projectile pill due to performance issues
+
 0.20131127
 ==========
 

@@ -291,7 +291,7 @@ A very good customization for tabbar-mode.
 Keystrokes:
 
 - M-<n> to change among the first 10 tabs
-- C-S o and C-S-p to change among tabs
+- C-S-o and C-S-p to change among tabs
 - C-S-i and C-S-j to change among groups
 
 `toggle-id-style.cfg <https://bitbucket.org/DavidVilla/emacs-pills/src/tip/pills//toggle-id-style.cfg.el>`_
