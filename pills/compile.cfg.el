@@ -100,13 +100,14 @@
   (save-window-excursion ad-do-it))
 
 ; FIXME: nobody calls this
-(defun recompile-if-not-in-progress ()
-  (let ((buffer (compilation-find-buffer)))
-    (unless (get-buffer-process buffer)
-      (recompile)))
-  )
+;; (defun recompile-if-not-in-progress ()
+;;   (let ((buffer (compilation-find-buffer)))
+;;     (unless (get-buffer-process buffer)
+;;       (recompile)))
+;;   )
 
 (defun interrupt-compilation ()
+  (interactive)
   (setq compilation-exit-message-function 'nil)
   (ignore-errors
     (progn (delete-process "*compilation*")
@@ -130,7 +131,7 @@
 (defun interrupt-and-recompile ()
   "Interrupt old compilation, if any, and recompile."
   (interactive)
-  (interrupt-compilation)
+  (ignore-errors (interrupt-compilation))
   (recompile)
 )
 
