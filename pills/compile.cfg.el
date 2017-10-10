@@ -51,10 +51,11 @@
 (defun modeline-set-color (color)
   "Colors the modeline"
   (interactive)
-  (if (and (>= emacs-major-version 24) (>= emacs-minor-version 3))
-    (set-face-background 'mode-line color)
-    (set-face-background 'modeline color)
-    )
+  ;; (if (and (>= emacs-major-version 24) (>= emacs-minor-version 3))
+  ;;   (set-face-background 'mode-line color)
+  ;;   (set-face-background 'modeline color)
+  ;;   )
+  (set-face-background 'mode-line color)
   )
 
 (defun modeline-cancel-timer ()
@@ -66,7 +67,7 @@
 (defun modeline-delayed-clean ()
   (modeline-cancel-timer)
   (setq modeline-timer
-		(run-at-time modeline-timeout nil 'modeline-set-color nil)))
+	(run-at-time modeline-timeout nil 'modeline-set-color nil)))
 
 (defun compilation-exit-hook (status code msg)
   ;; If M-x compile exists with a 0

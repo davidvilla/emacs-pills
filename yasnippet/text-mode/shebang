@@ -4,13 +4,13 @@
 # --
 #!/${$$(yas/choose-value '(\
 "bin/bash --
-# -*- coding: utf-8; mode: shell-script; tab-width: 4 -*-
+# -*- coding:utf-8; mode:shell-script; tab-width:4 -*-
 "\
-"usr/bin/python
-# -*- coding: utf-8; mode: python -*-
+"usr/bin/python3
+# -*- coding:utf-8; mode:python -*-
 "\
 "usr/bin/ruby
-# -*- coding: utf-8; mode: ruby; tab-width: 4 -*-
+# -*- coding:utf-8; mode:ruby; tab-width:4 -*-
 "\
 "usr/bin/make -f
 # -*- mode:makefile -*-
