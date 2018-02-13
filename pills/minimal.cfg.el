@@ -57,10 +57,6 @@
 	)
   )
 
-; Remember cursor position in edited files
-; (require 'saveplace)
-; (setq-default save-place t)
-
 ; put file name as frame-title
 (setq frame-title-format
   '("emacs%@" (:eval (system-name)) ": " (:eval (if (buffer-file-name)
